@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: anopticon-site
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: ./public
+    domains:
+      - anopticon.com
+      - www.anopticon.com
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
+      - path: /assets/*
+        name: Cache-Control
+        value: public, max-age=604800
