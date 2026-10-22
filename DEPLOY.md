@@ -1,6 +1,6 @@
 # anopticon.com
 
-One static page: `public/index.html`, `styles.css`, `main.js` and `assets/`. No build step, no framework, about 1.1 MB.
+Five static pages in `public/`, with `styles.css`, `main.js` and `assets/`. No build step, no framework, about 1.1 MB.
 Fonts come from Google Fonts; the pictures are public domain (`public/assets/credits.json`).
 
 Run it locally: `python -m http.server 4173 --directory public`.

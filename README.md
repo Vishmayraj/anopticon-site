@@ -2,7 +2,7 @@
 
 The public page for Anopticon: solving for data poisoning in the maritime domain.
 
-One static page. Plain HTML, CSS and JavaScript, no framework and no build step.
+Five static pages. Plain HTML, CSS and JavaScript, no framework and no build step.
 
 ## Layout
 
