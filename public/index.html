@@ -22,8 +22,10 @@
 
 <header class="hero" id="top">
   <canvas id="sea" aria-hidden="true"></canvas>
-  <a class="hero__mark" href="#top" aria-label="Anopticon, home"><img src="assets/anopticon-dark.svg" alt="Anopticon" width="200" height="40"></a>
-  <a class="btn btn--light hero__action" href="mailto:vishmayraj@anopticon.com?subject=Anopticon">Write to us</a>
+  <nav class="nav nav--dark" aria-label="Main">
+    <a class="nav__mark" href="index.html" aria-label="Anopticon, home"><img src="assets/anopticon-dark.svg" alt="Anopticon" width="200" height="40"></a>
+    <ul class="nav__links"><li><a href="#projects">Projects</a></li><li><a href="research.html">Research</a></li><li><a href="team.html">Team</a></li><li><a href="about.html">About</a></li><li><a class="btn btn--light" href="contact.html">Contact</a></li></ul>
+  </nav>
 
   <div class="hero__text">
     <h1 class="hero__h"><span class="line"><span>Data poisoning</span></span><span class="line"><span>at sea.</span></span></h1>
@@ -36,14 +38,14 @@
 
 <section class="lima" aria-labelledby="lima-h">
   <div class="wrap">
-    <h2 id="lima-h" class="lima__h reveal">It is already happening.</h2>
-    <p class="statement reveal">On 10 October 2026, ships in the Bosphorus reported positions inside one 3&nbsp;km patch of inland Lima. Moved, not sailed.</p>
-    <dl class="figures">
-      <div class="reveal"><dt>ships in the patch, 10 Oct</dt><dd>49</dd></div>
-      <div class="reveal"><dt>median distance from where they really were</dt><dd>12,221<small>km</small></dd></div>
-      <div class="reveal"><dt>median reported speed</dt><dd>94.9<small>kn</small></dd></div>
-    </dl>
+    <h2 id="lima-h" class="h2 reveal">10 October 2026</h2>
+    <p class="lima__lede reveal">Forty-nine ships in the Bosphorus reported positions in Lima, Peru. None of them sailed there.</p>
   </div>
+  <dl class="ledger">
+    <div class="ledger__row reveal"><dt>Where they were</dt><dd><span>The Bosphorus</span><code>41.56&deg;&nbsp;N 28.98&deg;&nbsp;E</code></dd></div>
+    <div class="ledger__row ledger__row--said reveal"><dt>Where they said</dt><dd><span>Inland Lima</span><code>12.04&deg;&nbsp;S 77.05&deg;&nbsp;W</code></dd></div>
+    <div class="ledger__row reveal"><dt>Apart</dt><dd><span>12,221 km</span><code>median, per ship</code></dd></div>
+  </dl>
 </section>
 
 <section class="othello" aria-labelledby="othello-h">
@@ -53,6 +55,13 @@
     <footer>Othello, Act III, Scene 3</footer>
   </blockquote>
   <p class="wrap othello__after reveal">Othello asked for proof and took a handkerchief. Most data is still trusted that way. We hand over the evidence and the means to check it.</p>
+</section>
+
+<section class="moat" aria-labelledby="moat-h">
+  <div class="wrap moat__grid">
+    <h2 id="moat-h" class="h2 reveal">Physics can&rsquo;t be poisoned.</h2>
+    <p class="reveal">Poison the data and a model learns the spoof. A hull obeys physics whatever the data says.</p>
+  </div>
 </section>
 
 <section class="projects" id="projects" aria-labelledby="projects-h">
@@ -107,31 +116,12 @@
   </article>
 </section>
 
-<section class="name" aria-labelledby="name-h">
-  <div class="wrap">
-    <h2 id="name-h" class="h2 reveal">Why Anopticon</h2>
-    <p class="name__body reveal"><mark class="hl-ink">Anopticon</mark> is the <mark>panopticon</mark> with the &ldquo;pan&rdquo; taken out. Bentham&rsquo;s panopticon is a prison built so one unseen watcher sees everyone, and no one can check the watcher. We wanted the opposite. But a ship <mark>cannot be in two places at once</mark>, and it cannot cross a continent in an hour. So we look, we write down where the evidence stops, and we hand over <mark>the means to check us</mark>. <mark class="hl-ink">Nothing hidden at the centre.</mark></p>
-  </div>
-</section>
-
-<section class="paper" id="research" aria-labelledby="paper-h">
-  <div class="wrap paper__grid">
-    <h2 id="paper-h" class="h2 reveal">Research</h2>
-    <article class="reveal">
-      <p class="paper__title">Ship manoeuvring and resistance models under sparse AIS sampling: what can be predicted, identified and bounded</p>
-      <p class="paper__by">Vishmayraj Zala, Kathan Patel. Under review, 2026.</p>
-      <p class="paper__finding">Between AIS reports, textbook turn models place a turning ship worse than simply averaging the two reports. Under sparse sampling, ship physics is good for bounds, not for filling in the gaps.</p>
-      <p><a class="link" href="https://doi.org/10.5281/zenodo.23538896">Code and data bundle, Zenodo<span aria-hidden="true"> &rarr;</span></a></p>
-    </article>
-  </div>
-</section>
-
-<section class="contact" id="contact" aria-labelledby="contact-h">
-  <h2 id="contact-h" class="sr-only">Contact</h2>
-  <a class="row row--mail" href="mailto:vishmayraj@anopticon.com?subject=Anopticon"><span>vishmayraj@<wbr>anopticon.com</span><span class="arrow" aria-hidden="true">&rarr;</span></a>
-  <div class="row"><span>Vishmayraj Zala, founder</span></div>
-  <div class="row"><span>Kathan Patel, co-founder</span></div>
-  <div class="row"><span>Gujarat, India</span></div>
+<section class="more" aria-labelledby="more-h">
+  <h2 id="more-h" class="sr-only">More</h2>
+  <a class="row" href="research.html"><span>Research</span><span class="arrow" aria-hidden="true">&rarr;</span></a>
+  <a class="row" href="team.html"><span>Team</span><span class="arrow" aria-hidden="true">&rarr;</span></a>
+  <a class="row" href="about.html"><span>Why Anopticon</span><span class="arrow" aria-hidden="true">&rarr;</span></a>
+  <a class="row row--mail" href="contact.html"><span>Write to us</span><span class="arrow" aria-hidden="true">&rarr;</span></a>
 </section>
 
 </main>
@@ -139,7 +129,7 @@
 <footer class="foot">
   <div class="wrap foot__cols">
     <div><p class="foot__lead">Anopticon</p><p>Solving for data poisoning in the maritime domain.</p></div>
-    <div><p class="foot__lead">Page</p><p><a href="#projects">Projects</a></p><p><a href="#research">Research</a></p><p><a href="#contact">Contact</a></p></div>
+    <div><p class="foot__lead">Pages</p><p><a href="index.html#projects">Projects</a></p><p><a href="research.html">Research</a></p><p><a href="team.html">Team</a></p><p><a href="about.html">About</a></p></div>
     <div><p class="foot__lead">Write</p><p><a href="mailto:vishmayraj@anopticon.com">vishmayraj@anopticon.com</a></p></div>
     <div><p class="foot__lead">Pictures</p><p>Istanbul Painter, Louvre CA 823; W. H. Roscher, 1890 (Wikimedia Commons); after Bruegel, The Met. All public domain.</p></div>
   </div>

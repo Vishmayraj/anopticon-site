@@ -8,9 +8,13 @@ One static page. Plain HTML, CSS and JavaScript, no framework and no build step.
 
 ```
 public/
-  index.html        the page
-  styles.css        all styles; brand tokens at the top (:root)
-  main.js           the hero canvas, the lens, section entrances
+  index.html        home: the live hero, 10 October 2026, Othello, projects
+  research.html     the paper and its findings
+  team.html         founders, with GitHub, LinkedIn and ORCID links
+  about.html        the name, the creed, the method
+  contact.html      email and names
+  styles.css        all styles; brand tokens and the type scale at the top (:root)
+  main.js           the hero canvas, the lens, section entrances (shared by every page)
   assets/
     anopticon-*.svg, favicon-paper.svg   brand wordmark and favicon
     nereus-lekythos.jpg, argus-vase.jpg, aether-icarus.jpg   project pictures
@@ -18,6 +22,11 @@ public/
 render.yaml         Render blueprint (static site, publishes public/)
 DEPLOY.md           domain and DNS steps
 ```
+
+There is no template step: every page carries its own copy of the nav and the footer. Change one, change all five.
+
+Type uses five sizes only, set as tokens in `styles.css`: small 15px, body 19px, lead (`--s-state`), heading
+(`--s-h2`) and display (`--s-disp`). New styles should use these, not new sizes.
 
 ## Run locally
 
