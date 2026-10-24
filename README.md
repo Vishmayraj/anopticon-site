@@ -16,7 +16,7 @@ public/
     site.css      all styles; palette and the five type sizes at the top (:root)
     site.js       page colour on scroll, drawings that draw with the scroll, menu, entrances
     world.js      land outline from Natural Earth (public domain), for the Lima case
-    og.png, icons/    social card, favicon (flag U) and app icons
+    og.png, icons/    social card, favicon (an orange position ring) and app icons
     img/          the three public-domain pictures and credits.json
 tools/              HTML used to render og.png and the icons with headless Chrome
 render.yaml         Render blueprint: publishes public/, redirects the old .html URLs
