@@ -4,22 +4,22 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>What is AIS spoofing? GNSS jamming explained | Anopticon</title>
-<meta name="description" content="AIS spoofing and GNSS jamming explained: what they are, how they show up in ship-tracking data, how they are detected, and why forged ship positions poison everything built on them.">
+<meta name="description" content="AIS spoofing and GNSS jamming explained: what they are, how they show up in ship-tracking data, how they are detected, and why false ship positions matter.">
 <link rel="canonical" href="https://anopticon.com/ais-spoofing/">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#FFFFFF">
 <meta property="og:site_name" content="Anopticon">
 <meta property="og:type" content="website">
 <meta property="og:title" content="What is AIS spoofing? GNSS jamming explained | Anopticon">
-<meta property="og:description" content="AIS spoofing and GNSS jamming explained: what they are, how they show up in ship-tracking data, how they are detected, and why forged ship positions poison everything built on them.">
+<meta property="og:description" content="AIS spoofing and GNSS jamming explained: what they are, how they show up in ship-tracking data, how they are detected, and why false ship positions matter.">
 <meta property="og:url" content="https://anopticon.com/ais-spoofing/">
 <meta property="og:image" content="https://anopticon.com/assets/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Anopticon. Is that ship really there?">
+<meta property="og:image:alt" content="Anopticon. Ships that were not where they said.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="What is AIS spoofing? GNSS jamming explained | Anopticon">
-<meta name="twitter:description" content="AIS spoofing and GNSS jamming explained: what they are, how they show up in ship-tracking data, how they are detected, and why forged ship positions poison everything built on them.">
+<meta name="twitter:description" content="AIS spoofing and GNSS jamming explained: what they are, how they show up in ship-tracking data, how they are detected, and why false ship positions matter.">
 <meta name="twitter:image" content="https://anopticon.com/assets/og.png">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
@@ -27,7 +27,7 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;600&family=Schibsted+Grotesk:wght@400;600;800&display=swap">
 <link rel="stylesheet" href="/assets/site.css">
 <script type="application/ld+json">
 {
@@ -46,21 +46,22 @@
    },
    "image": "https://anopticon.com/assets/og.png",
    "email": "vishmayraj@anopticon.com",
-   "description": "Anopticon verifies the positions ships report. It is a maritime data company from Gujarat, India, working on AIS spoofing, GNSS (GPS) jamming and forged ship positions, which it calls data poisoning at sea. Each reported position is checked against what the ship can physically do and against independent sources.",
-   "disambiguatingDescription": "The maritime ship-position verification company at anopticon.com. Not a general cybersecurity firm, and not the 2009 Venice CCTV-mapping project of the same name.",
+   "description": "Anopticon tests what machines report against what the physical world allows, and keeps independent records anyone can check. It starts at sea: AIS spoofing, GNSS (GPS) jamming and falsified ship positions, tested against what each ship can physically do and against independent sources. Then navies and coast guards, then aircraft. Founded in 2026 in Gujarat, India.",
+   "disambiguatingDescription": "The telemetry-integrity company at anopticon.com, starting with ship positions at sea. Not a general cybersecurity firm, and not the 2009 Venice CCTV-mapping project of the same name.",
    "foundingDate": "2026",
    "foundingLocation": {
     "@type": "Place",
     "name": "Gujarat, India"
    },
    "knowsAbout": [
+    "Telemetry integrity",
     "AIS spoofing",
     "GNSS jamming",
     "GPS spoofing at sea",
     "Automatic Identification System",
     "Ship position verification",
     "Maritime domain awareness",
-    "Data poisoning"
+    "ADS-B"
    ],
    "founder": [
     {
@@ -85,7 +86,7 @@
    "@id": "https://anopticon.com/#site",
    "url": "https://anopticon.com/",
    "name": "Anopticon",
-   "alternateName": "Anopticon, ship position verification",
+   "alternateName": "Anopticon, telemetry integrity",
    "publisher": {
     "@id": "https://anopticon.com/#org"
    },
@@ -96,7 +97,7 @@
    "@id": "https://anopticon.com/ais-spoofing/#page",
    "url": "https://anopticon.com/ais-spoofing/",
    "name": "What is AIS spoofing? GNSS jamming explained | Anopticon",
-   "description": "AIS spoofing and GNSS jamming explained: what they are, how they show up in ship-tracking data, how they are detected, and why forged ship positions poison everything built on them.",
+   "description": "AIS spoofing and GNSS jamming explained: what they are, how they show up in ship-tracking data, how they are detected, and why false ship positions matter.",
    "isPartOf": {
     "@id": "https://anopticon.com/#site"
    },
@@ -131,7 +132,7 @@
      "name": "What is AIS spoofing?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "AIS spoofing is a ship broadcasting a position, identity or movement over the Automatic Identification System that is not real. It happens when the ship's satellite-navigation receiver is fed a false signal, or when the AIS messages themselves are forged or altered."
+      "text": "A ship broadcasting a position, identity or movement over the Automatic Identification System that is not real. It happens when the ship's satellite-navigation receiver is fed a false signal, or when the AIS messages themselves are forged."
      }
     },
     {
@@ -139,7 +140,7 @@
      "name": "What is the difference between GNSS jamming and spoofing?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Jamming drowns the satellite signal, so the receiver loses its fix and positions freeze, drift or disappear. Spoofing replaces the signal with a false one, so the receiver confidently reports the wrong place. Mild jamming can look like spoofing in the data."
+      "text": "Jamming drowns the satellite signal, so the receiver loses its fix and positions freeze, drift or disappear. Spoofing replaces the signal with a false one, so the receiver reports the wrong place with full confidence. Mild jamming can look like spoofing in the data."
      }
     },
     {
@@ -147,7 +148,7 @@
      "name": "Can AIS spoofing be detected?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Much of it can be flagged from the data itself: a report that needs a speed no hull can reach, or many ships reporting the same impossible spot. AIS alone rarely shows who did it. Independent sources such as radar satellites can confirm where a ship really was."
+      "text": "A lot of it can be flagged from the data: a report that needs a speed no hull can reach, or many ships reporting the same impossible spot. AIS alone rarely shows who did it. Radar satellites can confirm where a ship really was."
      }
     },
     {
@@ -155,15 +156,15 @@
      "name": "Where does AIS spoofing happen?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Interference with ship navigation is reported regularly in the Baltic, the Black Sea, the eastern Mediterranean and the Gulf, and has been recorded off major ports elsewhere, including Los Angeles and Long Beach in January 2026."
+      "text": "Interference is reported regularly in the Baltic, the Black Sea, the eastern Mediterranean and the Gulf, and has been recorded off major ports elsewhere, including Los Angeles and Long Beach in January 2026."
      }
     },
     {
      "@type": "Question",
-     "name": "What does Anopticon do about it?",
+     "name": "What does Anopticon do?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Anopticon verifies the positions ships report: each one is checked against what that ship can physically do and against other ships and independent sources, and the finding is published with the data behind it."
+      "text": "We check reported ship positions against what that ship can physically do, against other ships and against independent sources, and we publish what we find with the data behind it."
      }
     }
    ]
@@ -173,48 +174,47 @@
 </script>
 <script>document.documentElement.classList.add('js')</script>
 </head>
-<body class="inner">
+<body data-tone="white">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="nav" aria-label="Main">
-  <a class="nav__mark" href="/"><span class="nav__flags" data-hoist="AN" aria-hidden="true"></span>Anopticon</a>
+  <a class="nav__mark" href="/">Anopticon</a>
   <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
-  <ul class="nav__links" id="menu"><li><a href="/ais-spoofing/" aria-current="page">AIS spoofing</a></li><li><a href="/ledger/">Ledger</a></li><li><a href="/projects/">Projects</a></li><li><a href="/research/">Research</a></li><li><a href="/team/">Team</a></li><li><a class="btn" href="/contact/">Contact</a></li></ul>
+  <ul class="nav__links" id="menu"><li><a href="/ais-spoofing/" aria-current="page">AIS spoofing</a></li><li><a href="/ledger/">Ledger</a></li><li><a href="/research/">Research</a></li><li><a href="/team/">Team</a></li><li><a href="/contact/">Contact</a></li></ul>
 </nav>
 <main id="main">
 <header class="phead wrap">
-  <div class="hoist hoist--page" data-hoist="SPOOF" role="img" aria-label="SPOOF in signal flags"></div>
   <h1 class="phead__h">AIS spoofing</h1>
-  <p class="phead__lede">How a ship comes to broadcast a position it is not in, and how to tell.</p>
+  <p class="phead__lede">How a ship ends up broadcasting a position it is not in, and how you can tell.</p>
 </header>
 
-<section class="band band--white" aria-labelledby="ais-h">
+<section class="band" aria-labelledby="ais-h">
   <div class="wrap duo">
-    <h2 id="ais-h" class="h2 reveal">A radio beacon on every ship.</h2>
+    <h2 id="ais-h" class="h2 reveal">What AIS is</h2>
     <div class="prose reveal">
-      <p>The Automatic Identification System makes every large ship broadcast its name, position, course and speed every few seconds on two VHF channels anyone can receive. Under the SOLAS convention it is carried by ships of 300 gross tonnage and upwards on international voyages, by cargo ships of 500 gross tonnage and upwards, and by all passenger ships.</p>
-      <p>The position in each message comes from the ship&rsquo;s own satellite-navigation receiver. AIS repeats whatever that receiver believes.</p>
+      <p>Every few seconds a ship&rsquo;s AIS transponder broadcasts its name, position, course and speed on two VHF channels anyone can receive. Under the SOLAS convention it is carried by ships of 300 gross tonnage and upwards on international voyages, by cargo ships of 500 gross tonnage and upwards, and by all passenger ships.</p>
+      <p>The position comes from the ship&rsquo;s own satellite-navigation receiver. AIS repeats whatever that receiver believes, and the message carries no signature.</p>
     </div>
   </div>
 </section>
 
 <section class="band band--black" aria-labelledby="ways-h">
   <div class="wrap">
-    <h2 id="ways-h" class="h2 reveal">Three ways the beacon lies.</h2>
+    <h2 id="ways-h" class="h2 reveal">Jamming, spoofing, forgery</h2>
     <dl class="ways">
-      <div class="reveal"><dt><span class="chip" data-flag="J"></span>Jamming</dt><dd>Noise drowns the satellite signal. The receiver loses its fix; positions freeze, drift or vanish.</dd></div>
-      <div class="reveal"><dt><span class="chip" data-flag="Y"></span>Spoofing</dt><dd>A false signal replaces the real one. The receiver reports the wrong place with full confidence, often many ships at once, often on land.</dd></div>
-      <div class="reveal"><dt><span class="chip" data-flag="X"></span>Forgery</dt><dd>The messages themselves are altered: a borrowed identity, a transponder switched off, a track that was never sailed.</dd></div>
+      <div class="reveal"><dt>Jamming</dt><dd>Noise drowns the satellite signal. The receiver loses its fix and positions freeze, drift or vanish.</dd></div>
+      <div class="reveal"><dt>Spoofing</dt><dd>A false signal replaces the real one. The receiver reports the wrong place, often many ships at once, often on land.</dd></div>
+      <div class="reveal"><dt>Forgery</dt><dd>The messages themselves are made up or changed: a borrowed identity, a ship that does not exist, a track never sailed.</dd></div>
     </dl>
   </div>
 </section>
 
-<section class="band band--white" aria-labelledby="tell-h">
+<section class="band" aria-labelledby="tell-h">
   <div class="wrap duo">
-    <h2 id="tell-h" class="h2 reveal">How you tell.</h2>
+    <h2 id="tell-h" class="h2 reveal">How to tell</h2>
     <div class="prose reveal">
-      <p><b>The hull.</b> A ship has a length, an engine and a top speed. A report that needs more than the hull can give did not happen as reported. Our <a href="/research/">research</a> measures how far ship physics can be trusted between sparse reports.</p>
-      <p><b>The crowd.</b> One ship jumping is a fault. Forty ships jumping to one place is a pattern.</p>
-      <p><b>A second witness.</b> Radar satellites see ships whether or not they broadcast. Where an image exists, it settles where the ship was.</p>
+      <p><b>The hull.</b> A ship has a length, an engine and a top speed. A report that needs more than that did not happen as reported. Our <a href="/research/">research</a> measures how far ship physics holds between sparse reports.</p>
+      <p><b>Other ships.</b> One ship jumping is a fault. Forty jumping to the same place is interference.</p>
+      <p><b>A second source.</b> Radar satellites see ships whether or not they broadcast. Where an image exists, it settles where the ship was.</p>
     </div>
   </div>
 </section>
@@ -222,18 +222,18 @@
 <section class="band band--grey" aria-labelledby="faq-h">
   <div class="wrap duo">
     <h2 id="faq-h" class="h2 reveal">Questions</h2>
-    <div class="faq reveal"><details><summary>What is AIS spoofing?</summary><p>AIS spoofing is a ship broadcasting a position, identity or movement over the Automatic Identification System that is not real. It happens when the ship's satellite-navigation receiver is fed a false signal, or when the AIS messages themselves are forged or altered.</p></details><details><summary>What is the difference between GNSS jamming and spoofing?</summary><p>Jamming drowns the satellite signal, so the receiver loses its fix and positions freeze, drift or disappear. Spoofing replaces the signal with a false one, so the receiver confidently reports the wrong place. Mild jamming can look like spoofing in the data.</p></details><details><summary>Can AIS spoofing be detected?</summary><p>Much of it can be flagged from the data itself: a report that needs a speed no hull can reach, or many ships reporting the same impossible spot. AIS alone rarely shows who did it. Independent sources such as radar satellites can confirm where a ship really was.</p></details><details><summary>Where does AIS spoofing happen?</summary><p>Interference with ship navigation is reported regularly in the Baltic, the Black Sea, the eastern Mediterranean and the Gulf, and has been recorded off major ports elsewhere, including Los Angeles and Long Beach in January 2026.</p></details><details><summary>What does Anopticon do about it?</summary><p>Anopticon verifies the positions ships report: each one is checked against what that ship can physically do and against other ships and independent sources, and the finding is published with the data behind it.</p></details></div>
+    <div class="faq reveal"><details><summary>What is AIS spoofing?</summary><p>A ship broadcasting a position, identity or movement over the Automatic Identification System that is not real. It happens when the ship's satellite-navigation receiver is fed a false signal, or when the AIS messages themselves are forged.</p></details><details><summary>What is the difference between GNSS jamming and spoofing?</summary><p>Jamming drowns the satellite signal, so the receiver loses its fix and positions freeze, drift or disappear. Spoofing replaces the signal with a false one, so the receiver reports the wrong place with full confidence. Mild jamming can look like spoofing in the data.</p></details><details><summary>Can AIS spoofing be detected?</summary><p>A lot of it can be flagged from the data: a report that needs a speed no hull can reach, or many ships reporting the same impossible spot. AIS alone rarely shows who did it. Radar satellites can confirm where a ship really was.</p></details><details><summary>Where does AIS spoofing happen?</summary><p>Interference is reported regularly in the Baltic, the Black Sea, the eastern Mediterranean and the Gulf, and has been recorded off major ports elsewhere, including Los Angeles and Long Beach in January 2026.</p></details><details><summary>What does Anopticon do?</summary><p>We check reported ship positions against what that ship can physically do, against other ships and against independent sources, and we publish what we find with the data behind it.</p></details></div>
   </div>
 </section>
 
-<section class="band band--white" aria-labelledby="src-h">
+<section class="band" aria-labelledby="src-h">
   <div class="wrap duo">
     <h2 id="src-h" class="h2 reveal">Sources</h2>
     <ul class="sources reveal">
       <li><a href="https://www.imo.org/en/OurWork/Safety/Pages/AIS.aspx">IMO: AIS transponders</a>, SOLAS chapter V carriage requirements</li>
+      <li><a href="https://www.technologyreview.com/2013/10/18/82918/ship-tracking-hack-makes-tankers-vanish-from-view/">Ship-tracking hack makes tankers vanish from view</a>, MIT Technology Review, 2013</li>
       <li><a href="https://arxiv.org/abs/2602.16257">SeaSpoofFinder: potential GNSS spoofing event detection using AIS</a>, arXiv, 2026</li>
       <li><a href="https://insidegnss.com/?p=197021">LA/Long Beach VTIS records spoofing event in January 2026</a>, Inside GNSS</li>
-      <li><a href="https://www.hellenicshippingnews.com/?p=1100977">Jamming and spoofing: responding to GNSS and AIS interference</a>, Hellenic Shipping News</li>
       <li><a href="/research/">Zala and Patel, ship physics under sparse AIS sampling</a>, 2026</li>
     </ul>
   </div>
@@ -241,19 +241,13 @@
 </main>
 
 <footer class="foot">
-  <div class="wrap foot__k">
-    <span class="chip chip--big" data-flag="K" aria-hidden="true"></span>
-    <p class="foot__say"><b>Kilo.</b> I wish to communicate with you.</p>
-    <a class="btn btn--yellow" href="mailto:vishmayraj@anopticon.com?subject=Anopticon">vishmayraj@anopticon.com</a>
-  </div>
-  <div class="wrap foot__cols">
-    <p class="foot__what">Anopticon verifies the positions ships report. AIS spoofing, GNSS jamming and forged positions, checked against what the ship can do.</p>
+  <div class="wrap foot__grid">
+    <p class="foot__what">Anopticon tests what machines report against what the physical world allows. Ships at sea now; navies and coast guards next; aircraft after. <a href="mailto:vishmayraj@anopticon.com">vishmayraj@anopticon.com</a></p>
     <ul><li><a href="/ais-spoofing/">AIS spoofing</a></li><li><a href="/ledger/">Ledger</a></li><li><a href="/research/">Research</a></li></ul>
     <ul><li><a href="/projects/">Projects</a></li><li><a href="/team/">Team</a></li><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li></ul>
   </div>
-  <p class="wrap foot__legal">&copy; 2026 Anopticon, Gujarat, India. Signal flags after the International Code of Signals. Pictures: Istanbul Painter (Louvre CA 823), W. H. Roscher (1890), after Bruegel (The Met); public domain.</p>
+  <p class="wrap foot__legal">&copy; 2026 Anopticon, Gujarat, India. The drawings on the home page illustrate the reported events; sources are linked under each case. Land: Natural Earth. Pictures: Istanbul Painter (Louvre CA 823), W. H. Roscher (1890), after Bruegel (The Met); public domain.</p>
 </footer>
-<script src="/assets/flags.js" defer></script>
 <script src="/assets/site.js" defer></script>
 </body>
 </html>

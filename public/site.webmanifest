@@ -1,7 +1,7 @@
 {
   "name": "Anopticon",
   "short_name": "Anopticon",
-  "description": "Anopticon verifies the positions ships report.",
+  "description": "Anopticon tests what machines report against what the physical world allows.",
   "start_url": "/",
   "display": "browser",
   "background_color": "#FFFFFF",

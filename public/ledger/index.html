@@ -3,23 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AIS spoofing incidents: the Interference Ledger | Anopticon</title>
-<meta name="description" content="A public record of GNSS interference seen in ship AIS data: dates, ship counts, distances and reported speeds. Ships near Istanbul reported in Lima, Peru, 10 and 11 October 2026.">
+<title>AIS spoofing incidents: the Anopticon ledger</title>
+<meta name="description" content="Interference events we have recorded in ship AIS data, with dates, ship counts, distances and reported speeds. Ships near Istanbul reported in Lima, Peru, 10 and 11 October 2026.">
 <link rel="canonical" href="https://anopticon.com/ledger/">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#FFFFFF">
 <meta property="og:site_name" content="Anopticon">
 <meta property="og:type" content="website">
-<meta property="og:title" content="AIS spoofing incidents: the Interference Ledger | Anopticon">
-<meta property="og:description" content="A public record of GNSS interference seen in ship AIS data: dates, ship counts, distances and reported speeds. Ships near Istanbul reported in Lima, Peru, 10 and 11 October 2026.">
+<meta property="og:title" content="AIS spoofing incidents: the Anopticon ledger">
+<meta property="og:description" content="Interference events we have recorded in ship AIS data, with dates, ship counts, distances and reported speeds. Ships near Istanbul reported in Lima, Peru, 10 and 11 October 2026.">
 <meta property="og:url" content="https://anopticon.com/ledger/">
 <meta property="og:image" content="https://anopticon.com/assets/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Anopticon. Is that ship really there?">
+<meta property="og:image:alt" content="Anopticon. Ships that were not where they said.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="AIS spoofing incidents: the Interference Ledger | Anopticon">
-<meta name="twitter:description" content="A public record of GNSS interference seen in ship AIS data: dates, ship counts, distances and reported speeds. Ships near Istanbul reported in Lima, Peru, 10 and 11 October 2026.">
+<meta name="twitter:title" content="AIS spoofing incidents: the Anopticon ledger">
+<meta name="twitter:description" content="Interference events we have recorded in ship AIS data, with dates, ship counts, distances and reported speeds. Ships near Istanbul reported in Lima, Peru, 10 and 11 October 2026.">
 <meta name="twitter:image" content="https://anopticon.com/assets/og.png">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
@@ -27,7 +27,7 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;600&family=Schibsted+Grotesk:wght@400;600;800&display=swap">
 <link rel="stylesheet" href="/assets/site.css">
 <script type="application/ld+json">
 {
@@ -46,21 +46,22 @@
    },
    "image": "https://anopticon.com/assets/og.png",
    "email": "vishmayraj@anopticon.com",
-   "description": "Anopticon verifies the positions ships report. It is a maritime data company from Gujarat, India, working on AIS spoofing, GNSS (GPS) jamming and forged ship positions, which it calls data poisoning at sea. Each reported position is checked against what the ship can physically do and against independent sources.",
-   "disambiguatingDescription": "The maritime ship-position verification company at anopticon.com. Not a general cybersecurity firm, and not the 2009 Venice CCTV-mapping project of the same name.",
+   "description": "Anopticon tests what machines report against what the physical world allows, and keeps independent records anyone can check. It starts at sea: AIS spoofing, GNSS (GPS) jamming and falsified ship positions, tested against what each ship can physically do and against independent sources. Then navies and coast guards, then aircraft. Founded in 2026 in Gujarat, India.",
+   "disambiguatingDescription": "The telemetry-integrity company at anopticon.com, starting with ship positions at sea. Not a general cybersecurity firm, and not the 2009 Venice CCTV-mapping project of the same name.",
    "foundingDate": "2026",
    "foundingLocation": {
     "@type": "Place",
     "name": "Gujarat, India"
    },
    "knowsAbout": [
+    "Telemetry integrity",
     "AIS spoofing",
     "GNSS jamming",
     "GPS spoofing at sea",
     "Automatic Identification System",
     "Ship position verification",
     "Maritime domain awareness",
-    "Data poisoning"
+    "ADS-B"
    ],
    "founder": [
     {
@@ -85,7 +86,7 @@
    "@id": "https://anopticon.com/#site",
    "url": "https://anopticon.com/",
    "name": "Anopticon",
-   "alternateName": "Anopticon, ship position verification",
+   "alternateName": "Anopticon, telemetry integrity",
    "publisher": {
     "@id": "https://anopticon.com/#org"
    },
@@ -95,8 +96,8 @@
    "@type": "WebPage",
    "@id": "https://anopticon.com/ledger/#page",
    "url": "https://anopticon.com/ledger/",
-   "name": "AIS spoofing incidents: the Interference Ledger | Anopticon",
-   "description": "A public record of GNSS interference seen in ship AIS data: dates, ship counts, distances and reported speeds. Ships near Istanbul reported in Lima, Peru, 10 and 11 October 2026.",
+   "name": "AIS spoofing incidents: the Anopticon ledger",
+   "description": "Interference events we have recorded in ship AIS data, with dates, ship counts, distances and reported speeds. Ships near Istanbul reported in Lima, Peru, 10 and 11 October 2026.",
    "isPartOf": {
     "@id": "https://anopticon.com/#site"
    },
@@ -128,21 +129,20 @@
 </script>
 <script>document.documentElement.classList.add('js')</script>
 </head>
-<body class="inner">
+<body data-tone="white">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="nav" aria-label="Main">
-  <a class="nav__mark" href="/"><span class="nav__flags" data-hoist="AN" aria-hidden="true"></span>Anopticon</a>
+  <a class="nav__mark" href="/">Anopticon</a>
   <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
-  <ul class="nav__links" id="menu"><li><a href="/ais-spoofing/">AIS spoofing</a></li><li><a href="/ledger/" aria-current="page">Ledger</a></li><li><a href="/projects/">Projects</a></li><li><a href="/research/">Research</a></li><li><a href="/team/">Team</a></li><li><a class="btn" href="/contact/">Contact</a></li></ul>
+  <ul class="nav__links" id="menu"><li><a href="/ais-spoofing/">AIS spoofing</a></li><li><a href="/ledger/" aria-current="page">Ledger</a></li><li><a href="/research/">Research</a></li><li><a href="/team/">Team</a></li><li><a href="/contact/">Contact</a></li></ul>
 </nav>
 <main id="main">
 <header class="phead wrap">
-  <div class="hoist hoist--page" data-hoist="LEDGER" role="img" aria-label="LEDGER in signal flags"></div>
   <h1 class="phead__h">Ledger</h1>
-  <p class="phead__lede">Interference events in ship position data, one entry per event, with where the evidence stops.</p>
+  <p class="phead__lede">Events we have recorded ourselves. One entry each, and a note on what the data cannot show.</p>
 </header>
 
-<section class="band band--white" aria-labelledby="e1-h">
+<section class="band" aria-labelledby="e1-h">
   <article class="wrap">
     <h2 id="e1-h" class="h2 reveal">Lima, 10 October 2026</h2>
     <p class="lead reveal measure">Ships in the Bosphorus and the western Black Sea broadcast positions inside one 3&nbsp;km patch of inland Lima, Peru.</p>
@@ -178,26 +178,20 @@
 
 <section class="band band--black" aria-labelledby="stop-h">
   <div class="wrap duo">
-    <h2 id="stop-h" class="h2 reveal">Where it stops.</h2>
-    <p class="lead reveal">The positions were moved, not sailed. The pattern fits interference with satellite navigation. It does not, on its own, show who or what caused it.</p>
+    <h2 id="stop-h" class="h2 reveal">What it does not show</h2>
+    <p class="lead reveal">The positions were moved, not sailed, and the pattern fits interference with satellite navigation. The data alone does not say who or what did it.</p>
   </div>
 </section>
 </main>
 
 <footer class="foot">
-  <div class="wrap foot__k">
-    <span class="chip chip--big" data-flag="K" aria-hidden="true"></span>
-    <p class="foot__say"><b>Kilo.</b> I wish to communicate with you.</p>
-    <a class="btn btn--yellow" href="mailto:vishmayraj@anopticon.com?subject=Anopticon">vishmayraj@anopticon.com</a>
-  </div>
-  <div class="wrap foot__cols">
-    <p class="foot__what">Anopticon verifies the positions ships report. AIS spoofing, GNSS jamming and forged positions, checked against what the ship can do.</p>
+  <div class="wrap foot__grid">
+    <p class="foot__what">Anopticon tests what machines report against what the physical world allows. Ships at sea now; navies and coast guards next; aircraft after. <a href="mailto:vishmayraj@anopticon.com">vishmayraj@anopticon.com</a></p>
     <ul><li><a href="/ais-spoofing/">AIS spoofing</a></li><li><a href="/ledger/">Ledger</a></li><li><a href="/research/">Research</a></li></ul>
     <ul><li><a href="/projects/">Projects</a></li><li><a href="/team/">Team</a></li><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li></ul>
   </div>
-  <p class="wrap foot__legal">&copy; 2026 Anopticon, Gujarat, India. Signal flags after the International Code of Signals. Pictures: Istanbul Painter (Louvre CA 823), W. H. Roscher (1890), after Bruegel (The Met); public domain.</p>
+  <p class="wrap foot__legal">&copy; 2026 Anopticon, Gujarat, India. The drawings on the home page illustrate the reported events; sources are linked under each case. Land: Natural Earth. Pictures: Istanbul Painter (Louvre CA 823), W. H. Roscher (1890), after Bruegel (The Met); public domain.</p>
 </footer>
-<script src="/assets/flags.js" defer></script>
 <script src="/assets/site.js" defer></script>
 </body>
 </html>

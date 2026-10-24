@@ -16,7 +16,7 @@
 <meta property="og:image" content="https://anopticon.com/assets/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Anopticon. Is that ship really there?">
+<meta property="og:image:alt" content="Anopticon. Ships that were not where they said.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Research: ship physics under sparse AIS sampling | Anopticon">
 <meta name="twitter:description" content="What sparse AIS reports let ship manoeuvring and resistance models predict, identify and bound, measured on 47.7 million reports from the Baltic and North Sea. Code and data on Zenodo.">
@@ -27,7 +27,7 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;600&family=Schibsted+Grotesk:wght@400;600;800&display=swap">
 <link rel="stylesheet" href="/assets/site.css">
 <script type="application/ld+json">
 {
@@ -46,21 +46,22 @@
    },
    "image": "https://anopticon.com/assets/og.png",
    "email": "vishmayraj@anopticon.com",
-   "description": "Anopticon verifies the positions ships report. It is a maritime data company from Gujarat, India, working on AIS spoofing, GNSS (GPS) jamming and forged ship positions, which it calls data poisoning at sea. Each reported position is checked against what the ship can physically do and against independent sources.",
-   "disambiguatingDescription": "The maritime ship-position verification company at anopticon.com. Not a general cybersecurity firm, and not the 2009 Venice CCTV-mapping project of the same name.",
+   "description": "Anopticon tests what machines report against what the physical world allows, and keeps independent records anyone can check. It starts at sea: AIS spoofing, GNSS (GPS) jamming and falsified ship positions, tested against what each ship can physically do and against independent sources. Then navies and coast guards, then aircraft. Founded in 2026 in Gujarat, India.",
+   "disambiguatingDescription": "The telemetry-integrity company at anopticon.com, starting with ship positions at sea. Not a general cybersecurity firm, and not the 2009 Venice CCTV-mapping project of the same name.",
    "foundingDate": "2026",
    "foundingLocation": {
     "@type": "Place",
     "name": "Gujarat, India"
    },
    "knowsAbout": [
+    "Telemetry integrity",
     "AIS spoofing",
     "GNSS jamming",
     "GPS spoofing at sea",
     "Automatic Identification System",
     "Ship position verification",
     "Maritime domain awareness",
-    "Data poisoning"
+    "ADS-B"
    ],
    "founder": [
     {
@@ -85,7 +86,7 @@
    "@id": "https://anopticon.com/#site",
    "url": "https://anopticon.com/",
    "name": "Anopticon",
-   "alternateName": "Anopticon, ship position verification",
+   "alternateName": "Anopticon, telemetry integrity",
    "publisher": {
     "@id": "https://anopticon.com/#org"
    },
@@ -147,21 +148,20 @@
 </script>
 <script>document.documentElement.classList.add('js')</script>
 </head>
-<body class="inner">
+<body data-tone="white">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="nav" aria-label="Main">
-  <a class="nav__mark" href="/"><span class="nav__flags" data-hoist="AN" aria-hidden="true"></span>Anopticon</a>
+  <a class="nav__mark" href="/">Anopticon</a>
   <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
-  <ul class="nav__links" id="menu"><li><a href="/ais-spoofing/">AIS spoofing</a></li><li><a href="/ledger/">Ledger</a></li><li><a href="/projects/">Projects</a></li><li><a href="/research/" aria-current="page">Research</a></li><li><a href="/team/">Team</a></li><li><a class="btn" href="/contact/">Contact</a></li></ul>
+  <ul class="nav__links" id="menu"><li><a href="/ais-spoofing/">AIS spoofing</a></li><li><a href="/ledger/">Ledger</a></li><li><a href="/research/" aria-current="page">Research</a></li><li><a href="/team/">Team</a></li><li><a href="/contact/">Contact</a></li></ul>
 </nav>
 <main id="main">
 <header class="phead wrap">
-  <div class="hoist hoist--page" data-hoist="DATA" role="img" aria-label="DATA in signal flags"></div>
   <h1 class="phead__h">Research</h1>
-  <p class="phead__lede">The method in the open. The code for every number is public.</p>
+  <p class="phead__lede">The method is public, and so is the code behind every number.</p>
 </header>
 
-<section class="band band--white" aria-labelledby="p1-h">
+<section class="band" aria-labelledby="p1-h">
   <div class="wrap duo">
     <div>
       <h2 id="p1-h" class="paper-title reveal">Ship manoeuvring and resistance models under sparse AIS sampling: what can be predicted, identified and bounded</h2>
@@ -169,12 +169,12 @@
       <p class="reveal"><a class="btn" href="https://doi.org/10.5281/zenodo.23538896">Code and data on Zenodo</a></p>
     </div>
     <div class="prose reveal">
-      <p>Shore stations see a ship only through AIS reports, seconds to minutes apart. We measured what those reports let ship physics predict, identify and bound: 47,739,929 reports from four networks over eleven days in the Baltic and North Sea, tested on held-out ships.</p>
+      <p>On shore you only see a ship through its AIS reports, seconds to minutes apart. We measured what those reports let ship physics predict, identify and bound, on 47,739,929 reports from four networks over eleven days in the Baltic and North Sea, tested on ships the models had not seen.</p>
       <table class="data data--plain">
         <caption class="sr-only">Findings</caption>
         <tbody>
-          <tr><th scope="row">Turns</th><td>On course changes of 45&deg; or more, textbook turn models place the ship about 22% worse at the 95th percentile than averaging the two reports.</td></tr>
-          <tr><th scope="row">Steering</th><td>A hull&rsquo;s steering constants can&rsquo;t be identified from AIS. It carries no rudder angle.</td></tr>
+          <tr><th scope="row">Turns</th><td>On course changes of 45&deg; or more, standard turn models place the ship about 22% worse at the 95th percentile than simply averaging the two reports.</td></tr>
+          <tr><th scope="row">Steering</th><td>A hull&rsquo;s steering constants can&rsquo;t be identified from AIS, because AIS carries no rudder angle.</td></tr>
           <tr><th scope="row">Speed</th><td>A Holtrop&ndash;Mennen speed screen is crossed by 4 of 8,472 ships up to Froude number 0.45, and by 181 of 199 above it.</td></tr>
           <tr><th scope="row">So</th><td>Between sparse reports, ship physics is good for bounds, not for filling in the gaps.</td></tr>
         </tbody>
@@ -185,19 +185,13 @@
 </main>
 
 <footer class="foot">
-  <div class="wrap foot__k">
-    <span class="chip chip--big" data-flag="K" aria-hidden="true"></span>
-    <p class="foot__say"><b>Kilo.</b> I wish to communicate with you.</p>
-    <a class="btn btn--yellow" href="mailto:vishmayraj@anopticon.com?subject=Anopticon">vishmayraj@anopticon.com</a>
-  </div>
-  <div class="wrap foot__cols">
-    <p class="foot__what">Anopticon verifies the positions ships report. AIS spoofing, GNSS jamming and forged positions, checked against what the ship can do.</p>
+  <div class="wrap foot__grid">
+    <p class="foot__what">Anopticon tests what machines report against what the physical world allows. Ships at sea now; navies and coast guards next; aircraft after. <a href="mailto:vishmayraj@anopticon.com">vishmayraj@anopticon.com</a></p>
     <ul><li><a href="/ais-spoofing/">AIS spoofing</a></li><li><a href="/ledger/">Ledger</a></li><li><a href="/research/">Research</a></li></ul>
     <ul><li><a href="/projects/">Projects</a></li><li><a href="/team/">Team</a></li><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li></ul>
   </div>
-  <p class="wrap foot__legal">&copy; 2026 Anopticon, Gujarat, India. Signal flags after the International Code of Signals. Pictures: Istanbul Painter (Louvre CA 823), W. H. Roscher (1890), after Bruegel (The Met); public domain.</p>
+  <p class="wrap foot__legal">&copy; 2026 Anopticon, Gujarat, India. The drawings on the home page illustrate the reported events; sources are linked under each case. Land: Natural Earth. Pictures: Istanbul Painter (Louvre CA 823), W. H. Roscher (1890), after Bruegel (The Met); public domain.</p>
 </footer>
-<script src="/assets/flags.js" defer></script>
 <script src="/assets/site.js" defer></script>
 </body>
 </html>

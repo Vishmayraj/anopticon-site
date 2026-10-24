@@ -1,6 +1,6 @@
 # anopticon.com
 
-The website of Anopticon. Anopticon verifies the positions ships report.
+The website of Anopticon. Anopticon tests what machines report against what the physical world allows.
 
 Static pages, plain HTML, CSS and JavaScript. No framework; `build.py` writes the pages.
 
@@ -9,13 +9,13 @@ Static pages, plain HTML, CSS and JavaScript. No framework; `build.py` writes th
 ```
 build.py            every page, its title, description and JSON-LD; writes public/ and the sitemap
 public/
-  index.html                     home: the forged-flag hoist, flags then and now, hoist your name, Lima, Sea/Watch/Air
+  index.html                     home: five real cases of ships that were not where they said
   ais-spoofing/  ledger/  projects/ (nereus/ argus/ aether/)  research/  team/  about/  contact/   one subject each
   404.html  sitemap.xml  robots.txt  llms.txt  site.webmanifest  favicon.ico
   assets/
     site.css      all styles; palette and the five type sizes at the top (:root)
-    site.js       flags, the forged-flag hunt, hoist your name, prints, menu, entrances
-    flags.js      the 26 International Code of Signals letter flags (from the public-domain ICS drawings on Wikimedia Commons)
+    site.js       page colour on scroll, drawings that draw with the scroll, menu, entrances
+    world.js      land outline from Natural Earth (public domain), for the Lima case
     og.png, icons/    social card, favicon (flag U) and app icons
     img/          the three public-domain pictures and credits.json
 tools/              HTML used to render og.png and the icons with headless Chrome
@@ -24,7 +24,7 @@ render.yaml         Render blueprint: publishes public/, redirects the old .html
 
 Edit `build.py` (copy) or `public/assets/*` (look), run `python build.py`, commit `public/`. Render needs no build step.
 
-The one sentence that says what Anopticon does, "Anopticon verifies the positions ships report.", is `WHAT` in `build.py`
+The one sentence that says what Anopticon does, "Anopticon tests what machines report against what the physical world allows.", is `WHAT` in `build.py`
 and appears on every page, in the schema, the manifest and `llms.txt`. Keep it plain; AI answer engines read it.
 
 ## Run locally
@@ -35,11 +35,12 @@ python -m http.server 4173 --directory public
 
 Then open http://localhost:4173. Any static server works.
 
-## The flags
+## The home page
 
-Black, white and the three signal colours, one face (Schibsted Grotesk). Every flag is real and says what it means: K on Contact
-("I wish to communicate with you"), U as the favicon ("You are running into danger"), N on the 404 ("Negative"). The home hoist
-spells ANOPTICON with one flag forged at random; hovering or tapping reads each flag. Without JavaScript the text is all still there.
+Five real cases, oldest first: the 2013 "pwned" ship, Point Reyes 2019, Shanghai 2019, Los Angeles and Long Beach 2026, and our
+own Lima record of October 2026. Each case has a drawing whose lines draw as you scroll, and the page colour follows the case on
+screen (black, white, International Orange). All text is in the HTML; the drawings and the world map add to it, nothing waits on
+them. Sources are linked under each case.
 
 ## Pictures
 
