@@ -1,7 +1,7 @@
 {
   "name": "Anopticon",
   "short_name": "Anopticon",
-  "description": "Anopticon tests what machines report against what the physical world allows.",
+  "description": "Anopticon tests what machines report against what the physical world allows, using data that already exists.",
   "start_url": "/",
   "display": "browser",
   "background_color": "#FFFFFF",
