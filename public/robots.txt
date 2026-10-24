@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://anopticon.com/sitemap.xml

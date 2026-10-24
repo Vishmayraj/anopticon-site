@@ -1,0 +1,15 @@
+<!doctype html><html><head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;800&display=swap">
+<script src="../public/assets/flags.js"></script>
+<style>
+html,body{margin:0}body{width:1200px;height:630px;background:#0A0A0A;color:#fff;font-family:"Schibsted Grotesk";position:relative;overflow:hidden}
+.h{position:absolute;left:56px;right:56px;top:56px;display:grid;grid-template-columns:repeat(9,1fr);gap:8px}
+.h svg{width:100%;aspect-ratio:1;display:block}
+h1{position:absolute;left:52px;bottom:118px;margin:0;font:800 104px/.86 "Schibsted Grotesk";letter-spacing:-.055em;text-transform:uppercase}
+p{position:absolute;left:56px;bottom:52px;margin:0;font-size:30px}
+</style></head><body>
+<div class="h" id="h"></div>
+<h1>Is that ship<br>really there?</h1>
+<p>Anopticon verifies the positions ships report.</p>
+<script>for (const c of 'ANOPTICON') document.getElementById('h').insertAdjacentHTML('beforeend', `<svg viewBox="${ICS[c].v}" preserveAspectRatio="none">${ICS[c].s}</svg>`);</script>
+</body></html>

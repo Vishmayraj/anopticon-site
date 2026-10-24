@@ -3,140 +3,223 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Anopticon</title>
-<meta name="description" content="Anopticon is solving for data poisoning in the maritime domain.">
-<meta name="theme-color" content="#0E1116">
-<meta property="og:title" content="Anopticon">
-<meta property="og:description" content="Solving for data poisoning in the maritime domain.">
-<meta property="og:url" content="https://anopticon.com/">
-<meta property="og:type" content="website">
+<title>Anopticon | Ship position verification: AIS spoofing and GNSS jamming</title>
+<meta name="description" content="Anopticon verifies the positions ships report. AIS spoofing, GNSS jamming and forged ship positions, checked against what a ship can physically do.">
 <link rel="canonical" href="https://anopticon.com/">
-<link rel="icon" href="assets/favicon-paper.svg" type="image/svg+xml">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0A0A0A">
+<meta property="og:site_name" content="Anopticon">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Anopticon | Ship position verification: AIS spoofing and GNSS jamming">
+<meta property="og:description" content="Anopticon verifies the positions ships report. AIS spoofing, GNSS jamming and forged ship positions, checked against what a ship can physically do.">
+<meta property="og:url" content="https://anopticon.com/">
+<meta property="og:image" content="https://anopticon.com/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Anopticon. Is that ship really there?">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Anopticon | Ship position verification: AIS spoofing and GNSS jamming">
+<meta name="twitter:description" content="Anopticon verifies the positions ships report. AIS spoofing, GNSS jamming and forged ship positions, checked against what a ship can physically do.">
+<meta name="twitter:image" content="https://anopticon.com/assets/og.png">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,650&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;800&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://anopticon.com/#org",
+   "name": "Anopticon",
+   "url": "https://anopticon.com/",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://anopticon.com/assets/icons/logo-512.png",
+    "width": 512,
+    "height": 512
+   },
+   "image": "https://anopticon.com/assets/og.png",
+   "email": "vishmayraj@anopticon.com",
+   "description": "Anopticon verifies the positions ships report. It is a maritime data company from Gujarat, India, working on AIS spoofing, GNSS (GPS) jamming and forged ship positions, which it calls data poisoning at sea. Each reported position is checked against what the ship can physically do and against independent sources.",
+   "disambiguatingDescription": "The maritime ship-position verification company at anopticon.com. Not a general cybersecurity firm, and not the 2009 Venice CCTV-mapping project of the same name.",
+   "foundingDate": "2026",
+   "foundingLocation": {
+    "@type": "Place",
+    "name": "Gujarat, India"
+   },
+   "knowsAbout": [
+    "AIS spoofing",
+    "GNSS jamming",
+    "GPS spoofing at sea",
+    "Automatic Identification System",
+    "Ship position verification",
+    "Maritime domain awareness",
+    "Data poisoning"
+   ],
+   "founder": [
+    {
+     "@id": "https://anopticon.com/team/#vishmayraj-zala"
+    },
+    {
+     "@id": "https://anopticon.com/team/#kathan-patel"
+    }
+   ],
+   "sameAs": [
+    "https://github.com/Vishmayraj/anopticon-site"
+   ],
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "vishmayraj@anopticon.com",
+    "contactType": "sales",
+    "availableLanguage": "English"
+   }
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://anopticon.com/#site",
+   "url": "https://anopticon.com/",
+   "name": "Anopticon",
+   "alternateName": "Anopticon, ship position verification",
+   "publisher": {
+    "@id": "https://anopticon.com/#org"
+   },
+   "inLanguage": "en"
+  },
+  {
+   "@type": "Person",
+   "@id": "https://anopticon.com/team/#vishmayraj-zala",
+   "name": "Vishmayraj Zala",
+   "jobTitle": "Founder",
+   "worksFor": {
+    "@id": "https://anopticon.com/#org"
+   },
+   "email": "vishmayraj@anopticon.com",
+   "alumniOf": "Gujarat Technological University",
+   "sameAs": [
+    "https://github.com/Vishmayraj",
+    "https://www.linkedin.com/in/vishmayraj-zala",
+    "https://orcid.org/0009-0007-9796-9449"
+   ]
+  },
+  {
+   "@type": "Person",
+   "@id": "https://anopticon.com/team/#kathan-patel",
+   "name": "Kathan Patel",
+   "jobTitle": "Co-founder",
+   "worksFor": {
+    "@id": "https://anopticon.com/#org"
+   },
+   "alumniOf": "Gujarat Technological University",
+   "sameAs": [
+    "https://github.com/KathanPatel1310",
+    "https://www.linkedin.com/in/kathan-patel-0235a3354"
+   ]
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://anopticon.com/#page",
+   "url": "https://anopticon.com/",
+   "name": "Anopticon | Ship position verification: AIS spoofing and GNSS jamming",
+   "description": "Anopticon verifies the positions ships report. AIS spoofing, GNSS jamming and forged ship positions, checked against what a ship can physically do.",
+   "isPartOf": {
+    "@id": "https://anopticon.com/#site"
+   },
+   "about": {
+    "@id": "https://anopticon.com/#org"
+   },
+   "dateModified": "2026-10-25",
+   "inLanguage": "en"
+  }
+ ]
+}
+</script>
 <script>document.documentElement.classList.add('js')</script>
 </head>
-<body>
+<body class="home">
+<a class="skip" href="#main">Skip to content</a>
+<nav class="nav nav--dark" aria-label="Main">
+  <a class="nav__mark" href="/"><span class="nav__flags" data-hoist="AN" aria-hidden="true"></span>Anopticon</a>
+  <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+  <ul class="nav__links" id="menu"><li><a href="/ais-spoofing/">AIS spoofing</a></li><li><a href="/ledger/">Ledger</a></li><li><a href="/projects/">Projects</a></li><li><a href="/research/">Research</a></li><li><a href="/team/">Team</a></li><li><a class="btn btn--light" href="/contact/">Contact</a></li></ul>
+</nav>
 
-<header class="hero" id="top">
-  <canvas id="sea" aria-hidden="true"></canvas>
-  <nav class="nav nav--dark" aria-label="Main">
-    <a class="nav__mark" href="index.html" aria-label="Anopticon, home"><img src="assets/anopticon-dark.svg" alt="Anopticon" width="200" height="40"></a>
-    <ul class="nav__links"><li><a href="#projects">Projects</a></li><li><a href="research.html">Research</a></li><li><a href="team.html">Team</a></li><li><a href="about.html">About</a></li><li><a class="btn btn--light" href="contact.html">Contact</a></li></ul>
-  </nav>
-
-  <div class="hero__text">
-    <h1 class="hero__h"><span class="line"><span>Data poisoning</span></span><span class="line"><span>at sea.</span></span></h1>
-    <p class="hero__lede">Ships tell the world where they are. That record is being jammed, spoofed and rewritten. Anopticon is solving for data poisoning in the maritime domain.</p>
-    <p class="hero__hint"><span class="pointer-only">Move across the water. Inside the ring, the poisoned reports show.</span><span class="touch-only">Tap the water. Inside the ring, the poisoned reports show.</span></p>
+<header class="hero">
+  <div class="hero__hoist" data-hoist="ANOPTICON" data-forge role="img" aria-label="ANOPTICON in signal flags, one of them forged"></div>
+  <p class="hero__game" id="game" aria-live="polite">One flag in this hoist is forged. Hover or tap the flags to read them, and find it.</p>
+  <div class="hero__text wrap">
+    <h1 class="hero__h"><span class="line"><span>Is that ship</span></span><span class="line"><span>really there?</span></span></h1>
+    <p class="hero__lede">Anopticon verifies the positions ships report. Every ship broadcasts where it is. Those broadcasts can be jammed, spoofed and forged, and everything downstream believes them.</p>
   </div>
 </header>
 
-<main>
+<main id="main">
+<section class="band band--white" aria-labelledby="then-h">
+  <div class="wrap duo">
+    <figure class="print print--tall" data-reveal><div class="print__frame" style="--src:url(/assets/img/aether-icarus.jpg)"><img src="/assets/img/aether-icarus.jpg" width="1600" height="1228" alt="Engraving of an armed three-masted ship under sail; high in the sky Daedalus flies on and Icarus falls from the sun." loading="lazy" decoding="async"></div><figcaption>Armed three-master with Daedalus and Icarus in the sky. After Pieter Bruegel the Elder, 1561&ndash;65. The Met.</figcaption></figure>
+    <div class="duo__copy">
+      <h2 id="then-h" class="h2 reveal">Flags couldn&rsquo;t lie from far away.</h2>
+      <p class="lead reveal">For a century and a half ships spoke in flags. To forge a ship&rsquo;s signal you had to be standing on it.</p>
+      <p class="reveal">Now they speak in radio. A ship&rsquo;s position comes from a satellite signal, goes out over AIS, and is read by ports, insurers, sanctions desks and models that never see the sea. That signal can be faked from the shore, out of sight. That is data poisoning, and it is what we work on.</p>
+    </div>
+  </div>
+</section>
 
-<section class="lima" aria-labelledby="lima-h">
+<section class="band band--black" aria-labelledby="own-h">
+  <div class="wrap duo duo--rev">
+    <div>
+      <h2 id="own-h" class="h2 reveal">Hoist your name.</h2>
+      <p class="lead reveal">Then forge one flag, and see whether you can still tell.</p>
+      <label class="own reveal"><span class="sr-only">Your name or your ship&rsquo;s</span>
+        <input id="own" type="text" maxlength="12" value="Nereus" autocomplete="off" spellcheck="false" aria-describedby="own-read">
+      </label>
+      <div class="own__buttons reveal">
+        <button class="btn btn--light" type="button" id="forge">Forge one</button>
+        <button class="btn btn--ghost" type="button" id="check">Check</button>
+      </div>
+    </div>
+    <div class="own__out">
+      <div class="hoist hoist--own" id="own-hoist" role="img" aria-label="Your name in signal flags"></div>
+      <p class="own__read" id="own-read" aria-live="polite"></p>
+    </div>
+  </div>
+</section>
+
+<section class="band band--white" aria-labelledby="lima-h">
   <div class="wrap">
-    <h2 id="lima-h" class="h2 reveal">10 October 2026</h2>
-    <p class="lima__lede reveal">Forty-nine ships in the Bosphorus reported positions in Lima, Peru. None of them sailed there.</p>
-  </div>
-  <dl class="ledger">
-    <div class="ledger__row reveal"><dt>Where they were</dt><dd><span>The Bosphorus</span><code>41.56&deg;&nbsp;N 28.98&deg;&nbsp;E</code></dd></div>
-    <div class="ledger__row ledger__row--said reveal"><dt>Where they said</dt><dd><span>Inland Lima</span><code>12.04&deg;&nbsp;S 77.05&deg;&nbsp;W</code></dd></div>
-    <div class="ledger__row reveal"><dt>Apart</dt><dd><span>12,221 km</span><code>median, per ship</code></dd></div>
-  </dl>
-</section>
-
-<section class="othello" aria-labelledby="othello-h">
-  <h2 id="othello-h" class="sr-only">Proof</h2>
-  <blockquote class="wrap reveal">
-    <p>&ldquo;Give me the ocular proof.&rdquo;</p>
-    <footer>Othello, Act III, Scene 3</footer>
-  </blockquote>
-  <p class="wrap othello__after reveal">Othello asked for proof and took a handkerchief. Most data is still trusted that way. We hand over the evidence and the means to check it.</p>
-</section>
-
-<section class="moat" aria-labelledby="moat-h">
-  <div class="wrap moat__grid">
-    <h2 id="moat-h" class="h2 reveal">Physics can&rsquo;t be poisoned.</h2>
-    <p class="reveal">Poison the data and a model learns the spoof. A hull obeys physics whatever the data says.</p>
+    <h2 id="lima-h" class="h2 reveal">The Bosphorus, reported as Lima.</h2>
+    <p class="lead reveal measure">On 10 October 2026, 49 ships near Istanbul broadcast positions inside one 3&nbsp;km patch of inland Peru, 12,221&nbsp;km away, at a median reported 94.9 knots.</p>
+    <p class="reveal"><a class="link" href="/ledger/">Read the entry in the Ledger</a></p>
   </div>
 </section>
 
-<section class="projects" id="projects" aria-labelledby="projects-h">
-  <div class="wrap projects__head">
-    <h2 id="projects-h" class="h2 reveal">Projects</h2>
-    <p class="reveal">One question, asked of every machine that reports where it is. Sea first.</p>
-  </div>
-
-  <article class="proj proj--nereus" aria-labelledby="nereus-h">
-    <div class="wrap proj__grid">
-      <figure class="proj__fig">
-        <img src="assets/nereus-lekythos.jpg" width="1600" height="1285" loading="lazy" decoding="async" alt="Black-figure painting on a small oil jar: Heracles grips Nereus, who has a fish's scaled tail and a lion springing from his back.">
-        <figcaption>Heracles holds Nereus through every change of shape. Lekythos by the Istanbul Painter, about 590 BC. Louvre.</figcaption>
-      </figure>
-      <div class="proj__copy">
-        <h3 id="nereus-h" class="proj__h">Project Nereus</h3>
-        <p class="proj__when">The sea. Now.</p>
-        <p>Nereus, the old man of the sea. Hesiod calls him the one <q>who is true and lies not</q>. To get a straight answer from him you had to hold on while he became a lion, a serpent, water.</p>
-        <p>Ship data shifts shape the same way. Nereus is our work on the sea: what really happened, and the means for anyone to check it.</p>
-      </div>
-    </div>
-  </article>
-
-  <article class="proj proj--argus" aria-labelledby="argus-h">
-    <div class="wrap proj__grid">
-      <figure class="proj__fig">
-        <img src="assets/argus-vase.jpg" width="1090" height="430" loading="lazy" decoding="async" alt="Line drawing from a Greek vase: Hermes strikes Argus, whose body is covered in eyes, while Zeus watches from his throne.">
-        <figcaption>Hermes kills Argus, the giant covered in eyes. After an Athenian red-figure vase; drawing published by W.&nbsp;H.&nbsp;Roscher.</figcaption>
-      </figure>
-      <div class="proj__copy">
-        <h3 id="argus-h" class="proj__h">Project Argus</h3>
-        <p class="proj__when">The watchers. Next.</p>
-        <p>Argus Panoptes had a hundred eyes and never closed them all. Hermes lulled every one to sleep and killed him anyway.</p>
-        <p>Watching everything is not the same as seeing what is true. Argus is for the navies and coast guards who watch the sea.</p>
-      </div>
-    </div>
-  </article>
-
-  <article class="proj proj--aether" aria-labelledby="aether-h">
-    <div class="wrap proj__grid">
-      <figure class="proj__fig">
-        <img src="assets/aether-icarus.jpg" width="1600" height="1228" loading="lazy" decoding="async" alt="Engraving of a heavily armed three-masted ship under sail; high in the sky, Daedalus flies on and Icarus falls from the sun.">
-        <figcaption>Armed three-master with Daedalus and Icarus in the sky. After Pieter Bruegel the Elder, 1561&ndash;65. The Met.</figcaption>
-      </figure>
-      <div class="proj__copy">
-        <h3 id="aether-h" class="proj__h">Project Aether</h3>
-        <p class="proj__when">The sky. Later.</p>
-        <p>Aether, the bright upper air. Bruegel put a warship and a falling Icarus in one frame: sea and sky, each trusting what it is told.</p>
-        <p>Aircraft broadcast where they are too, and that record can be poisoned the same way. Aether takes the question up.</p>
-      </div>
-    </div>
-  </article>
+<section class="domains" aria-labelledby="dom-h">
+  <h2 id="dom-h" class="sr-only">Projects</h2>
+  <a class="domain domain--sea" href="/projects/nereus/"><span class="domain__word">Sea</span><span class="domain__name">Nereus</span><span class="domain__when">Now</span></a>
+  <a class="domain domain--watch" href="/projects/argus/"><span class="domain__word">Watch</span><span class="domain__name">Argus</span><span class="domain__when">Next</span></a>
+  <a class="domain domain--air" href="/projects/aether/"><span class="domain__word">Air</span><span class="domain__name">Aether</span><span class="domain__when">Later</span></a>
 </section>
-
-<section class="more" aria-labelledby="more-h">
-  <h2 id="more-h" class="sr-only">More</h2>
-  <a class="row" href="research.html"><span>Research</span><span class="arrow" aria-hidden="true">&rarr;</span></a>
-  <a class="row" href="team.html"><span>Team</span><span class="arrow" aria-hidden="true">&rarr;</span></a>
-  <a class="row" href="about.html"><span>Why Anopticon</span><span class="arrow" aria-hidden="true">&rarr;</span></a>
-  <a class="row row--mail" href="contact.html"><span>Write to us</span><span class="arrow" aria-hidden="true">&rarr;</span></a>
-</section>
-
 </main>
 
 <footer class="foot">
-  <div class="wrap foot__cols">
-    <div><p class="foot__lead">Anopticon</p><p>Solving for data poisoning in the maritime domain.</p></div>
-    <div><p class="foot__lead">Pages</p><p><a href="index.html#projects">Projects</a></p><p><a href="research.html">Research</a></p><p><a href="team.html">Team</a></p><p><a href="about.html">About</a></p></div>
-    <div><p class="foot__lead">Write</p><p><a href="mailto:vishmayraj@anopticon.com">vishmayraj@anopticon.com</a></p></div>
-    <div><p class="foot__lead">Pictures</p><p>Istanbul Painter, Louvre CA 823; W. H. Roscher, 1890 (Wikimedia Commons); after Bruegel, The Met. All public domain.</p></div>
+  <div class="wrap foot__k">
+    <span class="chip chip--big" data-flag="K" aria-hidden="true"></span>
+    <p class="foot__say"><b>Kilo.</b> I wish to communicate with you.</p>
+    <a class="btn btn--yellow" href="mailto:vishmayraj@anopticon.com?subject=Anopticon">vishmayraj@anopticon.com</a>
   </div>
-  <img class="foot__word" src="assets/anopticon-dark.svg" alt="" width="1745" height="349" loading="lazy">
-  <p class="wrap foot__legal">&copy; 2026 Anopticon. Question boldly. Conclude carefully.</p>
+  <div class="wrap foot__cols">
+    <p class="foot__what">Anopticon verifies the positions ships report. AIS spoofing, GNSS jamming and forged positions, checked against what the ship can do.</p>
+    <ul><li><a href="/ais-spoofing/">AIS spoofing</a></li><li><a href="/ledger/">Ledger</a></li><li><a href="/research/">Research</a></li></ul>
+    <ul><li><a href="/projects/">Projects</a></li><li><a href="/team/">Team</a></li><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li></ul>
+  </div>
+  <p class="wrap foot__legal">&copy; 2026 Anopticon, Gujarat, India. Signal flags after the International Code of Signals. Pictures: Istanbul Painter (Louvre CA 823), W. H. Roscher (1890), after Bruegel (The Met); public domain.</p>
 </footer>
-
-<script src="main.js" defer></script>
+<script src="/assets/flags.js" defer></script>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>

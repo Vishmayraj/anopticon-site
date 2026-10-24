@@ -7,6 +7,19 @@ services:
     domains:
       - anopticon.com
       - www.anopticon.com
+    routes:
+      - type: redirect
+        source: /team.html
+        destination: /team/
+      - type: redirect
+        source: /research.html
+        destination: /research/
+      - type: redirect
+        source: /about.html
+        destination: /about/
+      - type: redirect
+        source: /contact.html
+        destination: /contact/
     headers:
       - path: /*
         name: X-Content-Type-Options
@@ -16,4 +29,4 @@ services:
         value: strict-origin-when-cross-origin
       - path: /assets/*
         name: Cache-Control
-        value: public, max-age=604800
+        value: public, max-age=86400

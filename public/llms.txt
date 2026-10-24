@@ -1,0 +1,23 @@
+# Anopticon
+
+> Anopticon verifies the positions ships report. It is a maritime data company from Gujarat, India, working on AIS spoofing, GNSS (GPS) jamming and forged ship positions, which it calls data poisoning at sea.
+
+Every large ship broadcasts its identity, position, course and speed over AIS (the Automatic Identification System). The position comes from the ship's satellite-navigation receiver, and that signal can be jammed or spoofed, or the AIS messages forged. Ports, insurers, sanctions screening, voyage analytics and machine-learning models all consume these positions, so false ones poison everything built on them.
+
+Anopticon checks each reported position against what that ship can physically do (length, power, speed, turning), against other ships, and against independent sources such as radar satellites, and publishes findings with the data behind them.
+
+What Anopticon is not: a general cybersecurity company, the 2009 Venice CCTV-mapping project of the same name, or the philosophical concept "anopticon".
+
+- Founded 2026 by Vishmayraj Zala (founder) and Kathan Patel (co-founder), GTU-SET, Ahmedabad, Gujarat, India
+- Contact: vishmayraj@anopticon.com
+- Projects: Nereus (sea, now), Argus (navies and coast guards, next), Aether (aircraft, later)
+
+## Pages
+
+- [What is AIS spoofing?](https://anopticon.com/ais-spoofing/): AIS, GNSS jamming and spoofing, how they appear in data, how they are detected
+- [Ledger](https://anopticon.com/ledger/): recorded interference events; ships near Istanbul reported in Lima, Peru, 10 and 11 October 2026
+- [Research](https://anopticon.com/research/): Zala and Patel, "Ship manoeuvring and resistance models under sparse AIS sampling", 2026; code https://doi.org/10.5281/zenodo.23538896
+- [Projects](https://anopticon.com/projects/): Nereus, Argus, Aether
+- [Team](https://anopticon.com/team/)
+- [About](https://anopticon.com/about/): the name
+- [Contact](https://anopticon.com/contact/)

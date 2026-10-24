@@ -1,6 +1,6 @@
 # anopticon.com
 
-Five static pages in `public/`, with `styles.css`, `main.js` and `assets/`. No build step, no framework, about 1.1 MB.
+Static pages in `public/`, written by `build.py`. Render needs no build step.
 Fonts come from Google Fonts; the pictures are public domain (`public/assets/credits.json`).
 
 Run it locally: `python -m http.server 4173 --directory public`.
@@ -31,3 +31,11 @@ Run it locally: `python -m http.server 4173 --directory public`.
 
 - "Under review, 2026" describes the paper; change it when the paper is accepted or published.
 - The brand book asks for a trademark check on "Argus" before it is used publicly.
+
+## After the domain works
+
+1. Google Search Console: add the domain property `anopticon.com` (DNS TXT record), submit `https://anopticon.com/sitemap.xml`,
+   then request indexing for `/` and `/ais-spoofing/`.
+2. Bing Webmaster Tools: import from Search Console. Bing also feeds ChatGPT search and Copilot.
+3. Put `https://anopticon.com` on the Zenodo record, both ORCID and GitHub profiles, and a LinkedIn company page. Add each new
+   profile URL to `sameAs` in `build.py` and rebuild.
