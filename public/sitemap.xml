@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://anopticon.com/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anopticon.com/ais-spoofing/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anopticon.com/ledger/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anopticon.com/projects/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anopticon.com/projects/nereus/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anopticon.com/projects/argus/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anopticon.com/projects/aether/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anopticon.com/ledger/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anopticon.com/research/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anopticon.com/team/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anopticon.com/questions/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anopticon.com/about/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anopticon.com/contact/</loc><lastmod>2026-10-25</lastmod></url>
 </urlset>

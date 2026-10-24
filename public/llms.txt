@@ -1,31 +1,19 @@
 # Anopticon
 
-> Anopticon tests what machines report against what the physical world allows, and keeps independent records anyone can check. It starts at sea, with ship positions: AIS spoofing, GNSS (GPS) jamming and falsified tracks. Then navies and coast guards, then aircraft.
+> Anopticon tests what machines report against what the physical world allows, using data that already exists: public AIS ship broadcasts, satellite radar and imagery, weather records and physics. It uses no custom sensors or surveillance hardware. Ship positions at sea first, then navies and coast guards, then aircraft.
 
-Ships, aircraft, vehicles and sensors all report where they are. More and more of those reports are wrong, through interference, fault or deception. Anopticon tests each report against what the physical world allows (for a ship: its length, power, speed and turning), compares independent sources such as radar satellites, measures how unusual a pattern is, and publishes findings with the data so others can check them.
-
-Belief: when something does not make sense, ask why. Method: question, investigate, verify.
-
-What Anopticon is not: a general cybersecurity company, the 2009 Venice CCTV-mapping project of the same name, or the philosophical concept "anopticon".
+What Anopticon is not: a general cybersecurity company, a hardware or surveillance company, the 2009 Venice CCTV-mapping project of the same name, or the philosophical concept "anopticon".
 
 - Founded 2026 by Vishmayraj Zala (founder) and Kathan Patel (co-founder), GTU-SET, Ahmedabad, Gujarat, India
 - Contact: vishmayraj@anopticon.com
 - Projects: Nereus (ships at sea, now), Argus (navies and coast guards, next), Aether (aircraft, later)
 
-## Cases on the home page
-
-- October 2013, off Italy: Trend Micro researchers made a fake ship sail the word "pwned" on public tracking maps (MIT Technology Review)
-- June 2019, Point Reyes, California: a crew boat in Nigeria broadcast a looping track over California for two weeks (SkyTruth, via The Log)
-- July 2019, Shanghai: ships reported in rings on the east bank of the Huangpu (C4ADS, via MIT Technology Review)
-- 29 January 2026, Los Angeles and Long Beach: seven ships jumped in reported position during a GPS test window (Inside GNSS)
-- 10 October 2026, Lima: 49 ships near Istanbul reported positions in inland Peru (Anopticon)
-
 ## Pages
 
-- [What is AIS spoofing?](https://anopticon.com/ais-spoofing/): AIS, GNSS jamming and spoofing, how they appear in data, how they are detected
-- [Ledger](https://anopticon.com/ledger/): recorded interference events; ships near Istanbul reported in Lima, Peru, 10 and 11 October 2026
-- [Research](https://anopticon.com/research/): Zala and Patel, "Ship manoeuvring and resistance models under sparse AIS sampling", 2026; code https://doi.org/10.5281/zenodo.23538896
 - [Projects](https://anopticon.com/projects/): Nereus, Argus, Aether
+- [Ledger](https://anopticon.com/ledger/): interference events recorded in ship data; ships near Istanbul reported in Lima, Peru, 10 and 11 October 2026
+- [Research](https://anopticon.com/research/): Zala and Patel, "Ship manoeuvring and resistance models under sparse AIS sampling", 2026; code https://doi.org/10.5281/zenodo.23538896
 - [Team](https://anopticon.com/team/)
-- [About](https://anopticon.com/about/): the name
+- [Questions](https://anopticon.com/questions/): short answers on what Anopticon is, the data it uses, AIS spoofing and GNSS jamming
+- [About](https://anopticon.com/about/): the name, and the 2013 "pwned" ship
 - [Contact](https://anopticon.com/contact/)

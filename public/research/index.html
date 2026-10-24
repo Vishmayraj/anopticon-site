@@ -7,7 +7,7 @@
 <meta name="description" content="What sparse AIS reports let ship manoeuvring and resistance models predict, identify and bound, measured on 47.7 million reports from the Baltic and North Sea. Code and data on Zenodo.">
 <link rel="canonical" href="https://anopticon.com/research/">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="theme-color" content="#FFFFFF">
+<meta name="theme-color" content="#0A0A0A">
 <meta property="og:site_name" content="Anopticon">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Research: ship physics under sparse AIS sampling | Anopticon">
@@ -16,7 +16,7 @@
 <meta property="og:image" content="https://anopticon.com/assets/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Anopticon. Ships that were not where they said.">
+<meta property="og:image:alt" content="Anopticon. Built on what is already there.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Research: ship physics under sparse AIS sampling | Anopticon">
 <meta name="twitter:description" content="What sparse AIS reports let ship manoeuvring and resistance models predict, identify and bound, measured on 47.7 million reports from the Baltic and North Sea. Code and data on Zenodo.">
@@ -25,6 +25,7 @@
 <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
+<link rel="preload" as="image" type="image/webp" imagesrcset="/assets/bg/research-960.webp 960w, /assets/bg/research-1600.webp 1600w" imagesizes="100vw">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;600&family=Schibsted+Grotesk:wght@400;600;800&display=swap">
@@ -46,8 +47,9 @@
    },
    "image": "https://anopticon.com/assets/og.png",
    "email": "vishmayraj@anopticon.com",
-   "description": "Anopticon tests what machines report against what the physical world allows, and keeps independent records anyone can check. It starts at sea: AIS spoofing, GNSS (GPS) jamming and falsified ship positions, tested against what each ship can physically do and against independent sources. Then navies and coast guards, then aircraft. Founded in 2026 in Gujarat, India.",
-   "disambiguatingDescription": "The telemetry-integrity company at anopticon.com, starting with ship positions at sea. Not a general cybersecurity firm, and not the 2009 Venice CCTV-mapping project of the same name.",
+   "slogan": "Built on what is already there.",
+   "description": "Anopticon tests what machines report against what the physical world allows. It uses data that already exists, such as public AIS ship broadcasts, satellite radar, weather records and physics, and no custom sensors or surveillance hardware. It starts with ship positions at sea (AIS spoofing, GNSS jamming, forged tracks), then navies and coast guards, then aircraft. Founded in 2026 in Gujarat, India.",
+   "disambiguatingDescription": "The company at anopticon.com that checks machine-reported positions using open and existing data. Not a cybersecurity firm, not a hardware or surveillance company, and not the 2009 Venice CCTV-mapping project of the same name.",
    "foundingDate": "2026",
    "foundingLocation": {
     "@type": "Place",
@@ -55,12 +57,13 @@
    },
    "knowsAbout": [
     "Telemetry integrity",
+    "Open data",
     "AIS spoofing",
     "GNSS jamming",
     "GPS spoofing at sea",
     "Automatic Identification System",
+    "Satellite radar",
     "Ship position verification",
-    "Maritime domain awareness",
     "ADS-B"
    ],
    "founder": [
@@ -86,7 +89,7 @@
    "@id": "https://anopticon.com/#site",
    "url": "https://anopticon.com/",
    "name": "Anopticon",
-   "alternateName": "Anopticon, telemetry integrity",
+   "alternateName": "Anopticon, built on what is already there",
    "publisher": {
     "@id": "https://anopticon.com/#org"
    },
@@ -148,56 +151,47 @@
 </script>
 <script>document.documentElement.classList.add('js')</script>
 </head>
-<body data-tone="white">
+<body class="inner">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="nav" aria-label="Main">
   <a class="nav__mark" href="/">Anopticon</a>
   <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
-  <ul class="nav__links" id="menu"><li><a href="/ais-spoofing/">AIS spoofing</a></li><li><a href="/ledger/">Ledger</a></li><li><a href="/research/" aria-current="page">Research</a></li><li><a href="/team/">Team</a></li><li><a href="/contact/">Contact</a></li></ul>
+  <ul class="nav__links" id="menu"><li><a href="/projects/">Projects</a></li><li><a href="/ledger/">Ledger</a></li><li><a href="/research/" aria-current="page">Research</a></li><li><a href="/team/">Team</a></li><li><a href="/questions/">Questions</a></li><li><a href="/contact/">Contact</a></li></ul>
 </nav>
 <main id="main">
-<header class="phead wrap">
-  <h1 class="phead__h">Research</h1>
-  <p class="phead__lede">The method is public, and so is the code behind every number.</p>
+<header class="hero" style="--pos:50% 30%;--pos-m:50% 30%">
+  <picture><source type="image/webp" srcset="/assets/bg/research-960.webp 960w, /assets/bg/research-1600.webp 1600w" sizes="100vw"><img src="/assets/bg/research-1600.jpg" alt="Engraving: Urania, muse of astronomy, holding a globe beside an armillary sphere." fetchpriority="high" decoding="async"></picture>
+  <div class="hero__text wrap">
+    <h1 class="hero__h">Research</h1>
+    <p class="hero__line">How far ship physics holds between two AIS reports.</p>
+  </div>
+  <p class="hero__credit">Urania, Johann Theodor de Bry, 1601, Art Institute of Chicago</p>
 </header>
 
-<section class="band myth" aria-label="Picture">
-  <div class="wrap duo">
-    <figure class="print reveal"><img src="/assets/img/urania.jpg" width="843" height="1393" alt="Engraving: Urania, muse of astronomy, holding a globe beside an armillary sphere." loading="lazy" decoding="async"><figcaption>Urania, Johann Theodor de Bry, 1601. Art Institute of Chicago.</figcaption></figure>
-    <p class="lead reveal myth__line">Urania, the muse who measured the sky.</p>
-  </div>
-</section>
-
 <section class="band" aria-labelledby="p1-h">
-  <div class="wrap duo">
-    <div>
-      <h2 id="p1-h" class="paper-title reveal">Ship manoeuvring and resistance models under sparse AIS sampling: what can be predicted, identified and bounded</h2>
-      <p class="byline reveal">Vishmayraj Zala, Kathan Patel. Under review, 2026.</p>
-      <p class="reveal"><a class="btn" href="https://doi.org/10.5281/zenodo.23538896">Code and data on Zenodo</a></p>
-    </div>
-    <div class="prose reveal">
-      <p>What can AIS reports, seconds to minutes apart, tell ship physics? We measured it on 47.7 million reports and ships the models had not seen.</p>
-      <table class="data data--plain">
-        <caption class="sr-only">Findings</caption>
-        <tbody>
-          <tr><th scope="row">Turns</th><td>On course changes of 45&deg; or more, standard turn models place the ship about 22% worse at the 95th percentile than simply averaging the two reports.</td></tr>
-          <tr><th scope="row">Steering</th><td>A hull&rsquo;s steering constants can&rsquo;t be identified from AIS, because AIS carries no rudder angle.</td></tr>
-          <tr><th scope="row">Speed</th><td>A Holtrop&ndash;Mennen speed screen is crossed by 4 of 8,472 ships up to Froude number 0.45, and by 181 of 199 above it.</td></tr>
-          <tr><th scope="row">So</th><td>Between sparse reports, ship physics is good for bounds, not for filling in the gaps.</td></tr>
-        </tbody>
-      </table>
-    </div>
+  <div class="wrap">
+    <h2 id="p1-h" class="paper-title reveal">Ship manoeuvring and resistance models under sparse AIS sampling: what can be predicted, identified and bounded</h2>
+    <p class="byline reveal">Vishmayraj Zala, Kathan Patel. Under review, 2026. 47,739,929 reports, Baltic and North Sea.</p>
+    <table class="data data--plain reveal">
+      <caption class="sr-only">Findings</caption>
+      <tbody>
+        <tr><th scope="row">Turns</th><td>On sharp turns, textbook models place the ship about 22% worse than averaging the two reports.</td></tr>
+        <tr><th scope="row">Steering</th><td>A hull&rsquo;s steering constants cannot be read from AIS. It carries no rudder angle.</td></tr>
+        <tr><th scope="row">Speed</th><td>4 of 8,472 ships cross a Holtrop&ndash;Mennen speed screen up to Froude number 0.45.</td></tr>
+        <tr><th scope="row">So</th><td>Between sparse reports, physics is good for bounds, not for filling gaps.</td></tr>
+      </tbody>
+    </table>
+    <p class="reveal" style="margin-top:32px"><a class="btn" href="https://doi.org/10.5281/zenodo.23538896">Code and data on Zenodo</a></p>
   </div>
 </section>
 </main>
 
 <footer class="foot">
   <div class="wrap foot__grid">
-    <p class="foot__what">Anopticon tests what machines report against what the physical world allows. Ships at sea now; navies and coast guards next; aircraft after. <a href="mailto:vishmayraj@anopticon.com">vishmayraj@anopticon.com</a></p>
-    <ul><li><a href="/ais-spoofing/">AIS spoofing</a></li><li><a href="/ledger/">Ledger</a></li><li><a href="/research/">Research</a></li></ul>
-    <ul><li><a href="/projects/">Projects</a></li><li><a href="/team/">Team</a></li><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li></ul>
+    <p class="foot__what">Anopticon tests what machines report against what the physical world allows, using data that already exists. <a href="mailto:vishmayraj@anopticon.com">vishmayraj@anopticon.com</a></p>
+    <ul><li><a href="/projects/">Projects</a></li><li><a href="/ledger/">Ledger</a></li><li><a href="/research/">Research</a></li><li><a href="/team/">Team</a></li><li><a href="/questions/">Questions</a></li><li><a href="/contact/">Contact</a></li><li><a href="/about/">About</a></li></ul>
   </div>
-  <p class="wrap foot__legal">&copy; 2026 Anopticon, Gujarat, India. Sources are linked on each page; pictures are public domain.</p>
+  <p class="wrap foot__legal">&copy; 2026 Anopticon, Gujarat, India. Paintings and drawings are public domain.</p>
 </footer>
 <script src="/assets/site.js" defer></script>
 </body>

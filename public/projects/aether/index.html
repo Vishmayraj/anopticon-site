@@ -3,28 +3,29 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Project Aether: position checks for aircraft | Anopticon</title>
-<meta name="description" content="Project Aether asks the same question of aircraft, which broadcast their positions too.">
+<title>Project Aether: for aircraft | Anopticon</title>
+<meta name="description" content="Project Aether asks the same question of aircraft, which broadcast their positions and get jammed and spoofed too.">
 <link rel="canonical" href="https://anopticon.com/projects/aether/">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="theme-color" content="#FFFFFF">
+<meta name="theme-color" content="#0A0A0A">
 <meta property="og:site_name" content="Anopticon">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Project Aether: position checks for aircraft | Anopticon">
-<meta property="og:description" content="Project Aether asks the same question of aircraft, which broadcast their positions too.">
+<meta property="og:title" content="Project Aether: for aircraft | Anopticon">
+<meta property="og:description" content="Project Aether asks the same question of aircraft, which broadcast their positions and get jammed and spoofed too.">
 <meta property="og:url" content="https://anopticon.com/projects/aether/">
 <meta property="og:image" content="https://anopticon.com/assets/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Anopticon. Ships that were not where they said.">
+<meta property="og:image:alt" content="Anopticon. Built on what is already there.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Project Aether: position checks for aircraft | Anopticon">
-<meta name="twitter:description" content="Project Aether asks the same question of aircraft, which broadcast their positions too.">
+<meta name="twitter:title" content="Project Aether: for aircraft | Anopticon">
+<meta name="twitter:description" content="Project Aether asks the same question of aircraft, which broadcast their positions and get jammed and spoofed too.">
 <meta name="twitter:image" content="https://anopticon.com/assets/og.png">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
+<link rel="preload" as="image" type="image/webp" imagesrcset="/assets/bg/aether-960.webp 960w, /assets/bg/aether-1600.webp 1600w" imagesizes="100vw">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;600&family=Schibsted+Grotesk:wght@400;600;800&display=swap">
@@ -46,8 +47,9 @@
    },
    "image": "https://anopticon.com/assets/og.png",
    "email": "vishmayraj@anopticon.com",
-   "description": "Anopticon tests what machines report against what the physical world allows, and keeps independent records anyone can check. It starts at sea: AIS spoofing, GNSS (GPS) jamming and falsified ship positions, tested against what each ship can physically do and against independent sources. Then navies and coast guards, then aircraft. Founded in 2026 in Gujarat, India.",
-   "disambiguatingDescription": "The telemetry-integrity company at anopticon.com, starting with ship positions at sea. Not a general cybersecurity firm, and not the 2009 Venice CCTV-mapping project of the same name.",
+   "slogan": "Built on what is already there.",
+   "description": "Anopticon tests what machines report against what the physical world allows. It uses data that already exists, such as public AIS ship broadcasts, satellite radar, weather records and physics, and no custom sensors or surveillance hardware. It starts with ship positions at sea (AIS spoofing, GNSS jamming, forged tracks), then navies and coast guards, then aircraft. Founded in 2026 in Gujarat, India.",
+   "disambiguatingDescription": "The company at anopticon.com that checks machine-reported positions using open and existing data. Not a cybersecurity firm, not a hardware or surveillance company, and not the 2009 Venice CCTV-mapping project of the same name.",
    "foundingDate": "2026",
    "foundingLocation": {
     "@type": "Place",
@@ -55,12 +57,13 @@
    },
    "knowsAbout": [
     "Telemetry integrity",
+    "Open data",
     "AIS spoofing",
     "GNSS jamming",
     "GPS spoofing at sea",
     "Automatic Identification System",
+    "Satellite radar",
     "Ship position verification",
-    "Maritime domain awareness",
     "ADS-B"
    ],
    "founder": [
@@ -86,7 +89,7 @@
    "@id": "https://anopticon.com/#site",
    "url": "https://anopticon.com/",
    "name": "Anopticon",
-   "alternateName": "Anopticon, telemetry integrity",
+   "alternateName": "Anopticon, built on what is already there",
    "publisher": {
     "@id": "https://anopticon.com/#org"
    },
@@ -96,8 +99,8 @@
    "@type": "WebPage",
    "@id": "https://anopticon.com/projects/aether/#page",
    "url": "https://anopticon.com/projects/aether/",
-   "name": "Project Aether: position checks for aircraft | Anopticon",
-   "description": "Project Aether asks the same question of aircraft, which broadcast their positions too.",
+   "name": "Project Aether: for aircraft | Anopticon",
+   "description": "Project Aether asks the same question of aircraft, which broadcast their positions and get jammed and spoofed too.",
    "isPartOf": {
     "@id": "https://anopticon.com/#site"
    },
@@ -135,40 +138,32 @@
 </script>
 <script>document.documentElement.classList.add('js')</script>
 </head>
-<body data-tone="white">
+<body class="inner">
 <a class="skip" href="#main">Skip to content</a>
 <nav class="nav" aria-label="Main">
   <a class="nav__mark" href="/">Anopticon</a>
   <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
-  <ul class="nav__links" id="menu"><li><a href="/ais-spoofing/">AIS spoofing</a></li><li><a href="/ledger/">Ledger</a></li><li><a href="/research/">Research</a></li><li><a href="/team/">Team</a></li><li><a href="/contact/">Contact</a></li></ul>
+  <ul class="nav__links" id="menu"><li><a href="/projects/" aria-current="page">Projects</a></li><li><a href="/ledger/">Ledger</a></li><li><a href="/research/">Research</a></li><li><a href="/team/">Team</a></li><li><a href="/questions/">Questions</a></li><li><a href="/contact/">Contact</a></li></ul>
 </nav>
 <main id="main">
-<header class="phead wrap">
-  <h1 class="phead__h">Aether</h1>
-  <p class="phead__lede">Aircraft. Later.</p>
+<header class="hero" style="--pos:50% 35%;--pos-m:50% 30%">
+  <picture><source type="image/webp" srcset="/assets/bg/aether-960.webp 960w, /assets/bg/aether-1600.webp 1600w" sizes="100vw"><img src="/assets/bg/aether-1600.jpg" alt="Engraving detail: Icarus falls out of the sun while Daedalus flies on." fetchpriority="high" decoding="async"></picture>
+  <div class="hero__text wrap">
+    <h1 class="hero__h">Aether</h1>
+    <p class="hero__line">Aircraft. Later.</p>
+  </div>
+  <p class="hero__credit">Detail, after Pieter Bruegel the Elder, 1561&ndash;65</p>
 </header>
-
-<section class="band" aria-labelledby="aether-h">
-  <div class="wrap duo">
-    <figure class="print reveal"><img src="/assets/img/aether-icarus.jpg" width="1600" height="1228" alt="Engraving of an armed three-masted ship under sail; in the sky, Icarus falls from the sun." loading="lazy" decoding="async"><figcaption>Armed three-master with Daedalus and Icarus in the sky. After Pieter Bruegel the Elder, 1561&ndash;65. The Met.</figcaption></figure>
-    <div class="prose reveal"><h2 id="aether-h" class="sr-only">Aether</h2><p>Aircraft broadcast where they are as well, and those broadcasts get jammed and spoofed in the same way.</p><p>Aether is that work, once the sea is done properly.</p></div>
-  </div>
-</section>
-
-<section class="close" aria-label="Other projects">
-  <div class="wrap close__links" style="margin-top:0"><a href="/projects/nereus/"><span>Nereus. Ships at sea.</span><span>Now</span></a><a href="/projects/argus/"><span>Argus. Navies and coast guards.</span><span>Next</span></a>
-    <a href="/projects/"><span>All projects</span><span>Projects</span></a>
-  </div>
-</section>
+<section class="band"><div class="wrap"><div class="pair reveal"><h2>The story</h2><p>Icarus trusted the wings he was given, and flew too close to the sun.</p></div><div class="pair reveal"><h2>What it checks</h2><p>Aircraft broadcast where they are as well, and get jammed and spoofed the same way.</p></div></div></section>
+<section class="band band--end"><div class="wrap"><nav class="rows" aria-label="Pages"><a href="/projects/nereus/"><span>Nereus. Ships at sea.</span><span>Now</span></a><a href="/projects/argus/"><span>Argus. Navies and coast guards.</span><span>Next</span></a><a href="/projects/"><span>All projects</span><span></span></a></nav></div></section>
 </main>
 
 <footer class="foot">
   <div class="wrap foot__grid">
-    <p class="foot__what">Anopticon tests what machines report against what the physical world allows. Ships at sea now; navies and coast guards next; aircraft after. <a href="mailto:vishmayraj@anopticon.com">vishmayraj@anopticon.com</a></p>
-    <ul><li><a href="/ais-spoofing/">AIS spoofing</a></li><li><a href="/ledger/">Ledger</a></li><li><a href="/research/">Research</a></li></ul>
-    <ul><li><a href="/projects/">Projects</a></li><li><a href="/team/">Team</a></li><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li></ul>
+    <p class="foot__what">Anopticon tests what machines report against what the physical world allows, using data that already exists. <a href="mailto:vishmayraj@anopticon.com">vishmayraj@anopticon.com</a></p>
+    <ul><li><a href="/projects/">Projects</a></li><li><a href="/ledger/">Ledger</a></li><li><a href="/research/">Research</a></li><li><a href="/team/">Team</a></li><li><a href="/questions/">Questions</a></li><li><a href="/contact/">Contact</a></li><li><a href="/about/">About</a></li></ul>
   </div>
-  <p class="wrap foot__legal">&copy; 2026 Anopticon, Gujarat, India. Sources are linked on each page; pictures are public domain.</p>
+  <p class="wrap foot__legal">&copy; 2026 Anopticon, Gujarat, India. Paintings and drawings are public domain.</p>
 </footer>
 <script src="/assets/site.js" defer></script>
 </body>

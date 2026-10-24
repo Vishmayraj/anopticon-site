@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Questions: what Anopticon is, AIS spoofing and GNSS jamming | Anopticon</title>
+<meta name="description" content="Short answers: what Anopticon is, what data it uses (no custom hardware), what AIS spoofing and GNSS jamming are, and how they are detected.">
+<link rel="canonical" href="https://anopticon.com/questions/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0A0A0A">
+<meta property="og:site_name" content="Anopticon">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Questions: what Anopticon is, AIS spoofing and GNSS jamming | Anopticon">
+<meta property="og:description" content="Short answers: what Anopticon is, what data it uses (no custom hardware), what AIS spoofing and GNSS jamming are, and how they are detected.">
+<meta property="og:url" content="https://anopticon.com/questions/">
+<meta property="og:image" content="https://anopticon.com/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Anopticon. Built on what is already there.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Questions: what Anopticon is, AIS spoofing and GNSS jamming | Anopticon">
+<meta name="twitter:description" content="Short answers: what Anopticon is, what data it uses (no custom hardware), what AIS spoofing and GNSS jamming are, and how they are detected.">
+<meta name="twitter:image" content="https://anopticon.com/assets/og.png">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" as="image" type="image/webp" imagesrcset="/assets/bg/questions-960.webp 960w, /assets/bg/questions-1600.webp 1600w, /assets/bg/questions-2560.webp 2560w" imagesizes="100vw">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;600&family=Schibsted+Grotesk:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://anopticon.com/#org",
+   "name": "Anopticon",
+   "url": "https://anopticon.com/",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://anopticon.com/assets/icons/logo-512.png",
+    "width": 512,
+    "height": 512
+   },
+   "image": "https://anopticon.com/assets/og.png",
+   "email": "vishmayraj@anopticon.com",
+   "slogan": "Built on what is already there.",
+   "description": "Anopticon tests what machines report against what the physical world allows. It uses data that already exists, such as public AIS ship broadcasts, satellite radar, weather records and physics, and no custom sensors or surveillance hardware. It starts with ship positions at sea (AIS spoofing, GNSS jamming, forged tracks), then navies and coast guards, then aircraft. Founded in 2026 in Gujarat, India.",
+   "disambiguatingDescription": "The company at anopticon.com that checks machine-reported positions using open and existing data. Not a cybersecurity firm, not a hardware or surveillance company, and not the 2009 Venice CCTV-mapping project of the same name.",
+   "foundingDate": "2026",
+   "foundingLocation": {
+    "@type": "Place",
+    "name": "Gujarat, India"
+   },
+   "knowsAbout": [
+    "Telemetry integrity",
+    "Open data",
+    "AIS spoofing",
+    "GNSS jamming",
+    "GPS spoofing at sea",
+    "Automatic Identification System",
+    "Satellite radar",
+    "Ship position verification",
+    "ADS-B"
+   ],
+   "founder": [
+    {
+     "@id": "https://anopticon.com/team/#vishmayraj-zala"
+    },
+    {
+     "@id": "https://anopticon.com/team/#kathan-patel"
+    }
+   ],
+   "sameAs": [
+    "https://github.com/Vishmayraj/anopticon-site"
+   ],
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "vishmayraj@anopticon.com",
+    "contactType": "sales",
+    "availableLanguage": "English"
+   }
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://anopticon.com/#site",
+   "url": "https://anopticon.com/",
+   "name": "Anopticon",
+   "alternateName": "Anopticon, built on what is already there",
+   "publisher": {
+    "@id": "https://anopticon.com/#org"
+   },
+   "inLanguage": "en"
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://anopticon.com/questions/#page",
+   "url": "https://anopticon.com/questions/",
+   "name": "Questions: what Anopticon is, AIS spoofing and GNSS jamming | Anopticon",
+   "description": "Short answers: what Anopticon is, what data it uses (no custom hardware), what AIS spoofing and GNSS jamming are, and how they are detected.",
+   "isPartOf": {
+    "@id": "https://anopticon.com/#site"
+   },
+   "about": {
+    "@id": "https://anopticon.com/#org"
+   },
+   "dateModified": "2026-10-25",
+   "inLanguage": "en"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Anopticon",
+     "item": "https://anopticon.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Questions",
+     "item": "https://anopticon.com/questions/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What is Anopticon?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A company that checks what machines report about where they are against what the physical world allows. Ships first."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What data does it use?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Data that already exists: public AIS ship broadcasts, satellite radar and imagery, weather and sea-state records, and ship physics."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does it use its own sensors or hardware?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Nothing is installed on ships and nothing new is launched. It reads what is already out there."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What does it check first?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ship positions at sea: AIS reports that were jammed, spoofed or forged, and the tracks built from them."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is AIS spoofing?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A ship broadcasting a position or identity that is not real, because its satellite signal was faked or its messages were."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is the difference between GNSS jamming and spoofing?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Jamming drowns the satellite signal, so positions freeze or vanish. Spoofing replaces it, so the ship reports the wrong place."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can it be detected?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Often, from the data alone: speeds no hull can reach, or many ships in one impossible spot. Radar satellites settle the rest."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Who is it for?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Anyone who has to rely on where a ship was: charterers, owners, insurers, claims handlers, lawyers, port operators."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What comes after ships?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Navies and coast guards, then aircraft, which broadcast their positions the same way."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Where is Anopticon based?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Gujarat, India. Founded in 2026 by Vishmayraj Zala and Kathan Patel."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What does the name mean?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The panopticon is a prison where one hidden guard sees everyone. Anopticon is the same tower with the walls taken away."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do I get in touch?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Email vishmayraj@anopticon.com, with the ship and the dates if there is a case."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="inner">
+<a class="skip" href="#main">Skip to content</a>
+<nav class="nav" aria-label="Main">
+  <a class="nav__mark" href="/">Anopticon</a>
+  <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+  <ul class="nav__links" id="menu"><li><a href="/projects/">Projects</a></li><li><a href="/ledger/">Ledger</a></li><li><a href="/research/">Research</a></li><li><a href="/team/">Team</a></li><li><a href="/questions/" aria-current="page">Questions</a></li><li><a href="/contact/">Contact</a></li></ul>
+</nav>
+<main id="main">
+<header class="hero" style="--pos:50% 45%;--pos-m:50% 45%">
+  <picture><source type="image/webp" srcset="/assets/bg/questions-960.webp 960w, /assets/bg/questions-1600.webp 1600w, /assets/bg/questions-2560.webp 2560w" sizes="100vw"><img src="/assets/bg/questions-1600.jpg" alt="Black-figure vase: Hermes running, a ram on his shoulders." fetchpriority="high" decoding="async"></picture>
+  <div class="hero__text wrap">
+    <h1 class="hero__h">Questions</h1>
+    <p class="hero__line">The short answers.</p>
+  </div>
+  <p class="hero__credit">Hermes, black-figure oinochoe, Louvre F 159</p>
+</header>
+<section class="band"><div class="wrap"><dl class="qa"><div class="reveal"><dt>What is Anopticon?</dt><dd>A company that checks what machines report about where they are against what the physical world allows. Ships first.</dd></div><div class="reveal"><dt>What data does it use?</dt><dd>Data that already exists: public AIS ship broadcasts, satellite radar and imagery, weather and sea-state records, and ship physics.</dd></div><div class="reveal"><dt>Does it use its own sensors or hardware?</dt><dd>No. Nothing is installed on ships and nothing new is launched. It reads what is already out there.</dd></div><div class="reveal"><dt>What does it check first?</dt><dd>Ship positions at sea: AIS reports that were jammed, spoofed or forged, and the tracks built from them.</dd></div><div class="reveal"><dt>What is AIS spoofing?</dt><dd>A ship broadcasting a position or identity that is not real, because its satellite signal was faked or its messages were.</dd></div><div class="reveal"><dt>What is the difference between GNSS jamming and spoofing?</dt><dd>Jamming drowns the satellite signal, so positions freeze or vanish. Spoofing replaces it, so the ship reports the wrong place.</dd></div><div class="reveal"><dt>Can it be detected?</dt><dd>Often, from the data alone: speeds no hull can reach, or many ships in one impossible spot. Radar satellites settle the rest.</dd></div><div class="reveal"><dt>Who is it for?</dt><dd>Anyone who has to rely on where a ship was: charterers, owners, insurers, claims handlers, lawyers, port operators.</dd></div><div class="reveal"><dt>What comes after ships?</dt><dd>Navies and coast guards, then aircraft, which broadcast their positions the same way.</dd></div><div class="reveal"><dt>Where is Anopticon based?</dt><dd>Gujarat, India. Founded in 2026 by Vishmayraj Zala and Kathan Patel.</dd></div><div class="reveal"><dt>What does the name mean?</dt><dd>The panopticon is a prison where one hidden guard sees everyone. Anopticon is the same tower with the walls taken away.</dd></div><div class="reveal"><dt>How do I get in touch?</dt><dd>Email vishmayraj@anopticon.com, with the ship and the dates if there is a case.</dd></div></dl></div></section>
+<section class="band band--end" aria-labelledby="src-h">
+  <div class="wrap pair"><h2 id="src-h">Sources</h2>
+    <ul class="sources">
+      <li><a href="https://www.imo.org/en/OurWork/Safety/Pages/AIS.aspx">IMO: AIS transponders</a></li>
+      <li><a href="https://www.technologyreview.com/2013/10/18/82918/ship-tracking-hack-makes-tankers-vanish-from-view/">Ship-tracking hack makes tankers vanish from view</a>, MIT Technology Review, 2013</li>
+      <li><a href="https://arxiv.org/abs/2602.16257">SeaSpoofFinder</a>, arXiv, 2026</li>
+      <li><a href="https://insidegnss.com/?p=197021">LA/Long Beach spoofing event, January 2026</a>, Inside GNSS</li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__grid">
+    <p class="foot__what">Anopticon tests what machines report against what the physical world allows, using data that already exists. <a href="mailto:vishmayraj@anopticon.com">vishmayraj@anopticon.com</a></p>
+    <ul><li><a href="/projects/">Projects</a></li><li><a href="/ledger/">Ledger</a></li><li><a href="/research/">Research</a></li><li><a href="/team/">Team</a></li><li><a href="/questions/">Questions</a></li><li><a href="/contact/">Contact</a></li><li><a href="/about/">About</a></li></ul>
+  </div>
+  <p class="wrap foot__legal">&copy; 2026 Anopticon, Gujarat, India. Paintings and drawings are public domain.</p>
+</footer>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>
