@@ -153,7 +153,7 @@
 <nav class="nav" aria-label="Main">
   <a class="nav__mark" href="/">Anopticon</a>
   <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
-  <ul class="nav__links" id="menu"><li><a href="/ais-spoofing/">AIS spoofing</a></li><li><a href="/ledger/">Ledger</a></li><li><a href="/research/" aria-current="page">Research</a></li><li><a href="/team/">Team</a></li><li><a href="/contact/">Contact</a></li></ul>
+  <ul class="nav__links" id="menu"><li><a href="/projects/">Projects</a></li><li><a href="/ledger/">Ledger</a></li><li><a href="/research/" aria-current="page">Research</a></li><li><a href="/partners/">Partners</a></li><li><a href="/about/">About</a></li><li><a href="/join/">Join us</a></li></ul>
 </nav>
 <main id="main">
 <header class="phead wrap">
@@ -169,16 +169,36 @@
       <p class="reveal"><a class="btn" href="https://doi.org/10.5281/zenodo.23538896">Code and data on Zenodo</a></p>
     </div>
     <div class="prose reveal">
-      <p>On shore you only see a ship through its AIS reports, seconds to minutes apart. We measured what those reports let ship physics predict, identify and bound, on 47,739,929 reports from four networks over eleven days in the Baltic and North Sea, tested on ships the models had not seen.</p>
-      <table class="data data--plain">
-        <caption class="sr-only">Findings</caption>
-        <tbody>
-          <tr><th scope="row">Turns</th><td>On course changes of 45&deg; or more, standard turn models place the ship about 22% worse at the 95th percentile than simply averaging the two reports.</td></tr>
-          <tr><th scope="row">Steering</th><td>A hull&rsquo;s steering constants can&rsquo;t be identified from AIS, because AIS carries no rudder angle.</td></tr>
-          <tr><th scope="row">Speed</th><td>A Holtrop&ndash;Mennen speed screen is crossed by 4 of 8,472 ships up to Froude number 0.45, and by 181 of 199 above it.</td></tr>
-          <tr><th scope="row">So</th><td>Between sparse reports, ship physics is good for bounds, not for filling in the gaps.</td></tr>
-        </tbody>
-      </table>
+      <p>On shore you only see a ship through its AIS reports, seconds to minutes apart. Textbook ship physics describes continuous motion. We measured what survives the gap: what those reports let the models predict, what they let you work out about a particular hull, and what they let you rule out.</p>
+      <p>The data: 47,739,929 reports from four networks over eleven days in the Baltic and North Sea, tested on ships the models had not seen.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band band--grey" aria-labelledby="f-h">
+  <div class="wrap">
+    <h2 id="f-h" class="h2 reveal">What we found</h2>
+    <table class="data data--plain reveal">
+      <caption class="sr-only">Findings</caption>
+      <tbody>
+        <tr><th scope="row">Turns</th><td>On course changes of 45&deg; or more, standard turn models place the ship about 22% worse at the 95th percentile than simply averaging the two reports.</td></tr>
+        <tr><th scope="row">Steering</th><td>A hull&rsquo;s steering constants can&rsquo;t be identified from AIS, because AIS carries no rudder angle. Fitting them anyway makes predictions worse.</td></tr>
+        <tr><th scope="row">Speed</th><td>A Holtrop&ndash;Mennen speed screen is crossed by 4 of 8,472 ships up to Froude number 0.45, and by 181 of 199 above it, most of them fast passenger craft.</td></tr>
+        <tr><th scope="row">So</th><td>Between sparse reports, ship physics is good for bounds, not for filling in the gaps. That is exactly what a check needs.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="why-h">
+  <div class="wrap duo">
+    <figure class="print reveal"><img src="/assets/img/holbein-ambassadors.jpg" width="1600" height="1577" alt="Two men in a green-curtained room, with a celestial globe, sundials and a quadrant on the table between them." loading="lazy" decoding="async"><figcaption>The Ambassadors, Hans Holbein the Younger, 1533. On the table, the instruments of knowing where you are. National Gallery, London.</figcaption></figure>
+    <div>
+      <h2 id="why-h" class="h2 reveal">Why it matters to us</h2>
+      <div class="prose reveal" style="margin-top:24px">
+        <p>Every check we run asks whether a ship could have done what its reports say. The answer is only as good as the physics behind it, so we measured where that physics holds and where it does not before relying on it.</p>
+        <p>Next: a method note on our own detector, with its error rates on real data.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -187,10 +207,10 @@
 <footer class="foot">
   <div class="wrap foot__grid">
     <p class="foot__what">Anopticon tests what machines report against what the physical world allows. Ships at sea now; navies and coast guards next; aircraft after. <a href="mailto:vishmayraj@anopticon.com">vishmayraj@anopticon.com</a></p>
-    <ul><li><a href="/ais-spoofing/">AIS spoofing</a></li><li><a href="/ledger/">Ledger</a></li><li><a href="/research/">Research</a></li></ul>
-    <ul><li><a href="/projects/">Projects</a></li><li><a href="/team/">Team</a></li><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li></ul>
+    <ul><li><a href="/projects/">Projects</a></li><li><a href="/ledger/">Ledger</a></li><li><a href="/research/">Research</a></li><li><a href="/primer/">Primer</a></li></ul>
+    <ul><li><a href="/partners/">Design partners</a></li><li><a href="/about/">About</a></li><li><a href="/team/">Team</a></li><li><a href="/join/">Join us</a></li><li><a href="/contact/">Contact</a></li></ul>
   </div>
-  <p class="wrap foot__legal">&copy; 2026 Anopticon, Gujarat, India. The drawings on the home page illustrate the reported events; sources are linked under each case. Land: Natural Earth. Pictures: Istanbul Painter (Louvre CA 823), W. H. Roscher (1890), after Bruegel (The Met); public domain.</p>
+  <p class="wrap foot__legal">&copy; 2026 Anopticon, Gujarat, India. All pictures are public domain and credited where they appear.</p>
 </footer>
 <script src="/assets/site.js" defer></script>
 </body>

@@ -9,6 +9,12 @@ services:
       - www.anopticon.com
     routes:
       - type: redirect
+        source: /ais-spoofing/
+        destination: /primer/
+      - type: redirect
+        source: /ais-spoofing
+        destination: /primer/
+      - type: redirect
         source: /team.html
         destination: /team/
       - type: redirect

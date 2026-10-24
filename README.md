@@ -9,15 +9,15 @@ Static pages, plain HTML, CSS and JavaScript. No framework; `build.py` writes th
 ```
 build.py            every page, its title, description and JSON-LD; writes public/ and the sitemap
 public/
-  index.html                     home: five real cases of ships that were not where they said
-  ais-spoofing/  ledger/  projects/ (nereus/ argus/ aether/)  research/  team/  about/  contact/   one subject each
+  index.html                     home: what we do, and a way into every page
+  about/  projects/ (nereus/ argus/ aether/)  ledger/  research/  primer/  partners/  join/  team/  contact/
+  ais-spoofing/                  forwards to /primer/ (the old address)
   404.html  sitemap.xml  robots.txt  llms.txt  site.webmanifest  favicon.ico
   assets/
     site.css      all styles; palette and the five type sizes at the top (:root)
     site.js       page colour on scroll, drawings that draw with the scroll, menu, entrances
-    world.js      land outline from Natural Earth (public domain), for the Lima case
     og.png, icons/    social card, favicon (an orange position ring) and app icons
-    img/          the three public-domain pictures and credits.json
+    img/          public-domain pictures, with credits.json listing each source
 tools/              HTML used to render og.png and the icons with headless Chrome
 render.yaml         Render blueprint: publishes public/, redirects the old .html URLs
 ```
@@ -35,12 +35,12 @@ python -m http.server 4173 --directory public
 
 Then open http://localhost:4173. Any static server works.
 
-## The home page
+## The pages
 
-Five real cases, oldest first: the 2013 "pwned" ship, Point Reyes 2019, Shanghai 2019, Los Angeles and Long Beach 2026, and our
-own Lima record of October 2026. Each case has a drawing whose lines draw as you scroll, and the page colour follows the case on
-screen (black, white, International Orange). All text is in the HTML; the drawings and the world map add to it, nothing waits on
-them. Sources are linked under each case.
+The home page is an overview with a picture and a section for each part of the site. About opens with one real case, the 2013
+"pwned" ship, whose track draws itself as you scroll. Design partners and Join us both end in a prepared email. Each project page
+links to the previous and next project and back to all projects. The page colour follows the section on screen (black, white,
+International Orange).
 
 ## Pictures
 
