@@ -1,22 +1,6 @@
-// Anopticon: page colour follows the section on screen; case drawings draw with the scroll; menu; entrances.
+// Anopticon: case drawings draw with the scroll; menu; entrances.
 (() => {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const body = document.body;
-
-  // Colour: the section filling most of the screen sets the page tone.
-  const toneOf = (el) => el.dataset.tone || (el.classList.contains('band--black') ? 'black' : 'white');
-  const toned = [...document.querySelectorAll('main > section, main > header, main > article')];
-  if (toned.length) {
-    const seen = new Map();
-    const pick = () => {
-      let best = null, area = 0;
-      for (const [el, r] of seen) if (r > area) { area = r; best = el; }
-      if (best) body.dataset.tone = toneOf(best);
-    };
-    const io = new IntersectionObserver((es) => { for (const e of es) seen.set(e.target, e.intersectionRatio * e.boundingClientRect.height); pick(); },
-      { threshold: [0, .15, .3, .45, .6, .75, .9, 1] });
-    toned.forEach((el) => io.observe(el));
-  }
 
   // Drawings: each line knows its length; the scroll decides how much of it is drawn.
   const arts = [...document.querySelectorAll('[data-art]')];

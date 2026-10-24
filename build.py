@@ -57,9 +57,47 @@ PAPER = {
     'keywords': 'AIS, dead reckoning, Nomoto model, identifiability, Holtrop-Mennen, conformal prediction, GNSS interference',
 }
 
-NAV = [('/projects/', 'Projects'), ('/ledger/', 'Ledger'), ('/research/', 'Research'), ('/partners/', 'Partners'),
-       ('/about/', 'About'), ('/join/', 'Join us')]
+NAV = [('/ais-spoofing/', 'AIS spoofing'), ('/ledger/', 'Ledger'), ('/research/', 'Research'), ('/team/', 'Team'),
+       ('/contact/', 'Contact')]
 HERE = ' aria-current="page"'
+
+
+def picture(src, w, h, alt, cap):
+    return (f'<figure class="print reveal"><img src="{src}" width="{w}" height="{h}" alt="{html.escape(alt)}" '
+            f'loading="lazy" decoding="async"><figcaption>{cap}</figcaption></figure>')
+
+
+MYTH = {
+    'home': ('/assets/img/hermes-vase.jpg', 1067, 1600, 'Black-figure vase: Hermes running, a ram on his shoulders.',
+             'Hermes carried the messages of the gods. He was also the god of thieves.',
+             'Hermes, black-figure oinochoe, Louvre F 159.'),
+    'ais-spoofing/': ('/assets/img/ulysses-mast.jpg', 1000, 600, 'Painting: Ulysses tied to the mast of his ship, his crew rowing.',
+                      'Ulysses had himself tied to the mast, so he could hear the Sirens and not steer for them.',
+                      'Ulysses and the Sirens, Henri Lehmann, 1867, detail.'),
+    'ledger/': ('/assets/img/cassandra.jpg', 843, 1056, 'Drawing: Cassandra raises her hand towards a burning city.',
+                'Cassandra saw it coming and said so. We write it down.',
+                'Cassandra before the burning city of Troy. Art Institute of Chicago.'),
+    'research/': ('/assets/img/urania.jpg', 843, 1393, 'Engraving: Urania, muse of astronomy, holding a globe beside an armillary sphere.',
+                  'Urania, the muse who measured the sky.',
+                  'Urania, Johann Theodor de Bry, 1601. Art Institute of Chicago.'),
+    'team/': ('/assets/img/argonauts.jpg', 1600, 642, 'Painted panel: scenes from the voyage of the Argonauts.',
+              'Every crew starts small. The Argo had fifty.',
+              'Scenes from the Story of the Argonauts, Biagio d&rsquo;Antonio, about 1465. The Met.'),
+}
+
+
+def myth(key):
+    if key not in MYTH:
+        return ''
+    src, w, h, alt, line, cap = MYTH[key]
+    return f'''
+<section class="band myth" aria-label="Picture">
+  <div class="wrap duo">
+    <figure class="print reveal"><img src="{src}" width="{w}" height="{h}" alt="{html.escape(alt)}" loading="lazy" decoding="async"><figcaption>{cap}</figcaption></figure>
+    <p class="lead reveal myth__line">{line}</p>
+  </div>
+</section>
+'''
 
 
 def crumbs(page):
@@ -68,254 +106,156 @@ def crumbs(page):
         {'@type': 'ListItem', 'position': i + 1, 'name': n, 'item': SITE + u} for i, (n, u) in enumerate(items)]}
 
 
-EXTRA_IMG = {
-    'hero': ('/assets/img/wadsworth-dazzle-ships.jpg', 1280, 1600,
-             'Painting of a ship in dry dock, its hull covered in clashing black, white and grey stripes, with workers below.',
-             'Dazzle-ships in Drydock at Liverpool, Edward Wadsworth, 1919. Ships were painted like this to make an enemy misjudge their course.'),
-    'ledger': ('/assets/img/vinckeboons-delaware-1639.jpg', 1600, 1124,
-               'Hand-drawn sea chart of a bay and river with compass lines and a compass rose.',
-               'Chart of the South River in New Netherland (Delaware Bay), Joan Vinckeboons, 1639. Public domain.'),
-    'research': ('/assets/img/holbein-ambassadors.jpg', 1600, 1577,
-                 'Two men in a green-curtained room, with a celestial globe, sundials and a quadrant on the table between them.',
-                 'The Ambassadors, Hans Holbein the Younger, 1533. On the table, the instruments of knowing where you are. National Gallery, London.'),
-    'primer': ('/assets/img/dourado-chart-1571.jpg', 1600, 1228,
-               'Portuguese sea chart of the west coast of Africa, with compass roses, rhumb lines and flags.',
-               'Chart of the West African coast, Fern&atilde;o Vaz Dourado, 1571. Public domain.'),
-    'partners': ('/assets/img/darling-harbour-1900.jpg', 1024, 771,
-                 'Black and white photograph of a busy harbour with sailing ships, wharves and a railway yard.',
-                 'Darling Harbour, Sydney, about 1900. Kerry and Co., Powerhouse Museum. Public domain.'),
-    'join': ('/assets/img/marconi-operator.jpg', 1600, 1170,
-             'Black and white photograph of a wireless operator at his instruments in a ship radio room.',
-             'Marconi operator aboard the liner Deutschland, early 1900s. Bain News Service, Library of Congress. Public domain.'),
-    'about': ('/assets/img/eddystone-1703.jpg', 1110, 1600,
-              'Engraving of an ornate wooden lighthouse on a rock, with ships sailing around it.',
-              'Eddystone lighthouse, engraved by Henry Winstanley, its builder, before the storm of 1703 took it. Public domain.'),
-}
-
-# ---------------------------------------------------------------------------------------------------- pictures
-# Every picture is public domain; credits.json in assets/img lists the source pages.
-IMG = {
-    'nereus': ('/assets/img/nereus-lekythos.jpg', 1600, 1285,
-               "Black-figure painting on an oil jar: Heracles grips Nereus, who has a fish's tail and a lion springing from his back.",
-               'Heracles and Nereus. Lekythos by the Istanbul Painter, about 590 BC. Louvre, CA 823.'),
-    'argus': ('/assets/img/argus-vase.jpg', 1090, 430,
-              'Line drawing from a Greek vase: Hermes strikes Argus, whose body is covered in eyes.',
-              'Hermes kills Argus. Drawing after an Athenian red-figure vase, W. H. Roscher, 1890.'),
-    'aether': ('/assets/img/aether-icarus.jpg', 1600, 1228,
-               'Engraving of an armed three-masted ship under sail; in the sky, Icarus falls from the sun.',
-               'Armed three-master with Daedalus and Icarus in the sky. After Pieter Bruegel the Elder, 1561&ndash;65. The Met.'),
-}
-IMG.update(EXTRA_IMG)
-
-
-def pic(key, cls='print', lazy=True):
-    src, w, h, alt, cap = IMG[key]
-    lz = ' loading="lazy"' if lazy else ' fetchpriority="high"'
-    return (f'<figure class="{cls} reveal"><img src="{src}" width="{w}" height="{h}" alt="{html.escape(alt)}"{lz} '
-            f'decoding="async"><figcaption>{cap}</figcaption></figure>')
-
-
-# -------------------------------------------------------------------------------------------------- the one case
+# ------------------------------------------------------------------------------------------------ the cases (home)
+# Each drawing illustrates the case as reported; its lines draw themselves as you scroll.
 PWNED = ('M40 270 L40 90 L160 90 L160 180 L40 180 L220 90 L250 270 L280 180 L310 270 L340 90 L400 270 L400 90 '
          'L520 270 L520 90 L700 90 L580 90 L580 270 L700 270 L580 180 L670 180 L760 90 L760 270 L850 270 L880 240 '
          'L880 120 L850 90 L760 90')
-PWNED_ART = f'''<svg viewBox="0 0 920 360" role="img" aria-label="A ship's track that spells the word pwned">
+
+
+def la_art():
+    out = []
+    for k in range(7):
+        y = 60 + k * 64
+        x1 = 300 + k * 30
+        jx, jy = 560 + (k * 47) % 220, 30 + ((k * 3) % 7) * 64
+        out.append(f'  <path class="ink" d="M0 {y} L{x1} {y}" fill="none" stroke-width="5"/>\n'
+                   f'  <path class="draw mk" d="M{x1} {y} L{jx} {jy}" fill="none" stroke-width="4"/>\n'
+                   f'  <circle class="pop fillmk" data-at=".95" cx="{jx}" cy="{jy}" r="8"/>\n')
+    return ('<svg viewBox="0 0 920 520" role="img" aria-label="Seven ship tracks in parallel lanes, each with a sudden jump">\n'
+            + ''.join(out) + '  <text class="label" x="0" y="510">San Pedro Bay</text>\n</svg>')
+
+
+ART = {
+    'pwned': f'''<svg viewBox="0 0 920 360" role="img" aria-label="A ship's track that spells the word pwned">
   <path class="draw ink" d="{PWNED}" fill="none" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
   <circle class="pop fillmk" data-at=".98" cx="760" cy="90" r="11"/>
-  <text class="label" x="40" y="330">A ship that never existed, off Italy</text>
-</svg>'''
+  <text class="label" x="40" y="330">A fake ship, off Italy</text>
+</svg>''',
+    'reyes': '''<svg viewBox="0 0 920 520" role="img" aria-label="A coastline with a ship's track looping over the headland">
+  <path class="land" d="M560 0 L920 0 L920 520 L640 520 C610 470 650 430 610 390 C570 350 520 380 500 340 C480 300 540 280 520 240 C500 200 440 210 450 170 C460 130 530 140 540 90 C548 50 520 30 560 0 Z"/>
+  <path class="ink" d="M0 300 L300 300" fill="none" stroke-width="3" stroke-dasharray="6 8" style="opacity:.5"/>
+  <path class="draw ink" d="M300 300 C300 200 470 170 560 210 C660 255 640 370 540 390 C430 410 300 380 300 300 Z" fill="none" stroke-width="7"/>
+  <text class="label" x="0" y="285">from an oil terminal in Nigeria</text>
+  <text class="label" x="640" y="160">Point Reyes</text>
+</svg>''',
+    'rings': '''<svg viewBox="0 0 920 560" role="img" aria-label="A river, and rings of reported positions on the land beside it">
+  <path class="ink" d="M0 470 C180 430 300 500 460 460 C620 420 760 470 920 440" fill="none" stroke-width="44" style="opacity:.12"/>
+  <path class="draw ink" d="M540 150 a60 60 0 1 0 120 0 a60 60 0 1 0 -120 0" fill="none" stroke-width="6" stroke-linecap="round"/>
+  <path class="draw ink" d="M475 150 a125 125 0 1 0 250 0 a125 125 0 1 0 -250 0" fill="none" stroke-width="6" stroke-linecap="round"/>
+  <path class="draw mk" d="M410 150 a190 190 0 1 0 380 0 a190 190 0 1 0 -380 0" fill="none" stroke-width="6" stroke-linecap="round"/>
+  <text class="label" x="0" y="420">Huangpu river</text>
+  <text class="label" x="760" y="40">east bank</text>
+</svg>''',
+    'la': la_art(),
+    'lima': '''<svg viewBox="0 0 1000 500" role="img" aria-label="World map with a line from the Bosphorus to Lima, Peru">
+  <path class="land" id="world" d=""/>
+  <path class="draw ink" d="M580.5 136.1 Q 430 -20 286 283.4" fill="none" stroke-width="4"/>
+  <circle class="fillfg" cx="580.5" cy="136.1" r="7"/>
+  <circle class="pop fillfg" data-at=".97" cx="286" cy="283.4" r="11"/>
+  <text class="label" x="596" y="128">Bosphorus</text>
+  <text class="label" x="222" y="314">Lima</text>
+</svg>''',
+}
 
-PROJ = [('nereus', 'Nereus', 'Ships at sea', 'Now'), ('argus', 'Argus', 'Navies and coast guards', 'Next'),
-        ('aether', 'Aether', 'Aircraft', 'Later')]
+CASES = [
+    ('pwned', 'white', 'October 2013. Off Italy.', 'A ship that never existed sailed the word &ldquo;pwned&rdquo;.',
+     'Trend Micro researchers made it with a 700-euro radio. Public tracking maps showed it.',
+     '<a href="https://www.technologyreview.com/2013/10/18/82918/ship-tracking-hack-makes-tankers-vanish-from-view/">MIT Technology Review</a>, 18 October 2013'),
+    ('reyes', 'black', 'June 2019. Point Reyes, California.', 'A boat in Nigeria went round in circles over California.',
+     'For two weeks, a crew boat in Nigeria broadcast a loop over Point Reyes. Part of it was on land.',
+     '<a href="https://www.thelog.com/snw/ships-AIS-broadcasts-draw-GPS-crop-circles-thousands-of-miles-away-from-actual-locations/">The Log</a>, 28 August 2020'),
+    ('rings', 'white', 'July 2019. Shanghai.', 'Rings on the riverbank.',
+     'Ships near Shanghai showed up in rings on the bank of the Huangpu. Nobody has said who did it.',
+     '<a href="https://www.technologyreview.com/2019/11/15/131940/ghost-ships-crop-circles-and-soft-gold-a-gps-mystery-in-shanghai/">MIT Technology Review</a>, 15 November 2019'),
+    ('la', 'black', '29 January 2026. Los Angeles and Long Beach.', 'Seven ships jumped at once.',
+     'During a GPS test, seven ships jumped across an area 100 miles wide. One went silent for nearly an hour.',
+     '<a href="https://insidegnss.com/?p=197021">Inside GNSS</a>, 2026'),
+    ('lima', 'orange', '10 October 2026. Lima, Peru.', 'Ships off Istanbul turned up in Peru.',
+     'Forty-nine of them, in one 3&nbsp;km patch of inland Lima, 12,221&nbsp;km away. This one is ours.',
+     '<a href="/ledger/">The entry in our ledger</a>'),
+]
 
 
-def rows(items):
-    return '<nav class="close__links" aria-label="Pages">' + ''.join(
-        f'<a href="{u}"><span>{a}</span><span>{b}</span></a>' for u, a, b in items) + '</nav>'
+def case_html(c):
+    key, tone, when, h, p, src = c
+    return f'''<section class="case" data-tone="{tone}" aria-labelledby="case-{key}">
+  <div class="wrap case__grid">
+    <div>
+      <p class="case__when reveal">{when}</p>
+      <h2 class="case__h reveal" id="case-{key}">{h}</h2>
+      <p class="case__p reveal">{p}</p>
+      <p class="case__src reveal">{src}</p>
+    </div>
+    <div class="case__art" data-art>{ART[key]}</div>
+  </div>
+</section>
+'''
 
 
 PAGES = []
 
-# ------------------------------------------------------------------------------------------------------------ home
 PAGES.append(dict(
     path='', home=True, tone='black',
-    title='Anopticon | Independent records of what actually happened at sea',
-    desc=('Anopticon tests what machines report against what the physical world allows, starting with ship positions at sea: '
-          'AIS spoofing, GNSS jamming and falsified tracks, checked and kept as records anyone can verify.'),
+    title='Anopticon | Telemetry integrity, starting at sea: AIS spoofing and GNSS jamming',
+    desc=('Anopticon tests what machines report against what the physical world allows, starting with ships at sea. '
+          'Real cases of AIS spoofing and GNSS jamming, from the 2013 "pwned" ship to the Lima pile-up of October 2026.'),
     schema=[ORG, WEBSITE] + PEOPLE,
     body=f'''<main id="main">
 <header class="open wrap" data-tone="black">
-  <h1 class="open__h">Records of what actually happened.</h1>
+  <h1 class="open__h">Ships that were not where they said.</h1>
   <div class="open__row">
-    <p>{WHAT} We start at sea. Ships broadcast their own positions every few seconds, and those broadcasts are now jammed, spoofed and faked.</p>
-    <p class="open__count"><a href="/partners/">Bring us a case</a></p>
+    <p>{WHAT} We start with ships. Five times they were wrong:</p>
+    <p class="open__count">2013 &middot; 2019 &middot; 2019 &middot; 2026 &middot; 2026</p>
   </div>
 </header>
-
-<section class="home-img" data-tone="black" aria-label="Picture">
-  <div class="wrap">{pic('hero', 'print print--wide', lazy=False)}</div>
-</section>
-
-<section class="band" data-tone="white" aria-labelledby="do-h">
-  <div class="wrap duo">
-    <h2 class="h2 reveal" id="do-h">What we do</h2>
-    <div class="prose reveal">
-      <p>Every large ship reports its position over AIS, a radio system with no signature on its messages. The position comes from the ship&rsquo;s satellite receiver, and that receiver can be jammed or fooled. Ports, insurers, charterers, lawyers and navies all rely on those positions anyway.</p>
-      <p>We check them. Each report is tested against what that ship can physically do, against the ships around it, and against independent sources such as radar satellites. What we find goes into a record, with the data and the method, so the other side can check it too.</p>
-      <p>New to this? The <a href="/primer/">primer</a> explains how positions go wrong.</p>
-    </div>
-  </div>
-</section>
-
-<section class="band" data-tone="black" aria-labelledby="proj-h">
-  <div class="wrap">
-    <div class="duo">
-      <h2 class="h2 reveal" id="proj-h">Projects</h2>
-      <p class="lead reveal">One core, one domain at a time: sea first, then the people who watch it, then the air.</p>
-    </div>
-    {rows([(f'/projects/{k}/', f'{n}. {w}.', t) for k, n, w, t in PROJ])}
-  </div>
-</section>
-
-<section class="band" data-tone="white" aria-labelledby="ledger-h">
-  <div class="wrap duo">
-    {pic('ledger')}
-    <div>
-      <h2 class="h2 reveal" id="ledger-h">The ledger</h2>
-      <p class="lead reveal">On 10 October 2026, 49 ships near Istanbul reported themselves in inland Peru, 12,221&nbsp;km away. We found it, measured it and wrote it down.</p>
-      <p class="reveal" style="margin-top:24px"><a class="link" href="/ledger/">Read the entry</a></p>
-    </div>
-  </div>
-</section>
-
-<section class="band" data-tone="orange" aria-labelledby="partners-h">
-  <div class="wrap duo">
-    <h2 class="h2 reveal" id="partners-h">Design partners</h2>
-    <div class="reveal">
-      <p class="lead">We are working with a small number of early partners on real cases: claims, disputes, charters. If a ship&rsquo;s position matters to you, we would like to look at it.</p>
-      <p style="margin-top:24px"><a class="btn btn--solid" href="/partners/">How it works</a></p>
-    </div>
-  </div>
-</section>
-
-<section class="band" data-tone="white" aria-labelledby="research-h">
-  <div class="wrap duo">
-    <div>
-      <h2 class="h2 reveal" id="research-h">Research</h2>
-      <p class="lead reveal">Our first paper measures how far ship physics can be trusted between AIS reports, on 47.7 million real ones. The code is public.</p>
-      <p class="reveal" style="margin-top:24px"><a class="link" href="/research/">The paper</a></p>
-    </div>
-    {pic('research')}
-  </div>
-</section>
-
+''' + myth('home') + ''.join(case_html(c) for c in CASES) + f'''
 <section class="close" data-tone="black" aria-labelledby="close-h">
   <div class="wrap">
     <div class="close__grid">
-      <h2 class="h2 reveal" id="close-h">Two founders, in Gujarat.</h2>
+      <h2 class="h2 reveal" id="close-h">Independent records of what actually happened.</h2>
       <div class="reveal">
-        <p class="lead">We built the engine and wrote the paper ourselves, and we are looking for people who would rather check than assume.</p>
-        <p style="margin-top:24px"><a class="btn btn--solid" href="mailto:{MAIL}">{MAIL}</a></p>
+        <p class="lead">Sea first, then navies, then the air. Send us the ship and the dates.</p>
+        <p style="margin-top:24px"><a class="btn btn--solid" href="mailto:{MAIL}?subject=A%20ship%20to%20check">{MAIL}</a></p>
       </div>
     </div>
-    {rows([('/about/', 'Why we exist', 'About'), ('/team/', 'Who we are', 'Team'), ('/join/', 'Work with us', 'Join us'), ('/contact/', 'Get in touch', 'Contact')])}
+    <nav class="close__links" aria-label="More">
+      <a href="/projects/"><span>Sea, then watch, then air</span><span>Projects</span></a>
+      <a href="/ais-spoofing/"><span>How AIS spoofing works</span><span>Explainer</span></a>
+      <a href="/ledger/"><span>The ledger</span><span>Our records</span></a>
+      <a href="/research/"><span>Research</span><span>Paper, code, data</span></a>
+      <a href="/team/"><span>Who we are</span><span>Two founders</span></a>
+    </nav>
   </div>
 </section>
 </main>
 '''))
 
-# ----------------------------------------------------------------------------------------------------------- about
-PAGES.append(dict(
-    path='about/', crumbs=[('About', '/about/')], tone='black',
-    title='About Anopticon: why we exist and what the name means',
-    desc=('In 2013 a ship that never existed sailed the word "pwned" across public tracking maps. Why Anopticon exists, '
-          'how we work, and what the name means.'),
-    h1='About', lede='When something does not make sense, ask why.',
-    body=f'''
-<section class="case" data-tone="white" aria-labelledby="case-pwned">
-  <div class="wrap case__grid">
-    <div>
-      <p class="case__when reveal">October 2013. Off Italy.</p>
-      <h2 class="case__h reveal" id="case-pwned">A ship that never existed sailed the word &ldquo;pwned&rdquo;.</h2>
-      <p class="case__p reveal">Researchers at Trend Micro built it with a 700-euro AIS radio and a laptop near a port, and public tracking maps showed it. In the same tests a real tugboat left the Mississippi and turned up on a lake in Dallas. Nobody had to break into anything. AIS simply believes what it hears.</p>
-      <p class="case__src reveal"><a href="https://www.technologyreview.com/2013/10/18/82918/ship-tracking-hack-makes-tankers-vanish-from-view/">MIT Technology Review</a>, 18 October 2013</p>
-    </div>
-    <div class="case__art" data-art>{PWNED_ART}</div>
-  </div>
-</section>
-
-<section class="band" data-tone="black" aria-labelledby="why-h">
-  <div class="wrap duo">
-    <h2 id="why-h" class="h2 reveal">Why we exist</h2>
-    <div class="prose reveal">
-      <p>Thirteen years later the trick is ordinary. Ships near Istanbul report themselves in Peru. Ships in Shanghai appear in rings on dry land. Whole sea areas lose their satellite signal. Each of those false positions ends up in a port log, an insurance file, a sanctions screen or a court bundle.</p>
-      <p>Machines now report where they are all the time: ships, aircraft, vehicles, sensors. Almost nobody checks them independently. That is the job we picked.</p>
-    </div>
-  </div>
-</section>
-
-<section class="band" data-tone="white" aria-labelledby="how-h">
-  <div class="wrap duo">
-    <h2 id="how-h" class="h2 reveal">Question. Investigate. Verify.</h2>
-    <div class="prose reveal">
-      <p><b>Question.</b> Start with the report that does not fit: the impossible speed, the ship on land, the crowd in one spot.</p>
-      <p><b>Investigate.</b> Test it against what the physical world allows, compare independent sources, and measure how unusual the pattern really is.</p>
-      <p><b>Verify.</b> Write down what the evidence supports and where it stops, and hand over the data so anyone can rerun it. When we are wrong, the correction goes where the claim was.</p>
-    </div>
-  </div>
-</section>
-
-<section class="band" data-tone="black" aria-labelledby="name-h">
-  <div class="wrap duo">
-    {pic('about')}
-    <div>
-      <h2 id="name-h" class="h2 reveal">The name</h2>
-      <div class="prose reveal" style="margin-top:24px">
-        <p>Bentham&rsquo;s panopticon is a prison with a tower in the middle: the guard sees every cell and no prisoner sees the guard. Take the &ldquo;pan&rdquo; away and you have Anopticon. We kept the tower and took out the secret.</p>
-        <p>Say it an-OP-ti-kon. The word is older than us; a 2009 project in Venice used it to map the city&rsquo;s CCTV cameras. We are the maritime one, founded in 2026 in Gujarat.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="close" data-tone="white" aria-label="More">
-  <div class="wrap">{rows([('/team/', 'Who we are', 'Team'), ('/projects/', 'What we are building', 'Projects'), ('/join/', 'Work with us', 'Join us')])}</div>
-</section>
-'''))
-
-# ---------------------------------------------------------------------------------------------------------- primer
 FAQ = [
     ('What is AIS spoofing?',
-     'A ship broadcasting a position, identity or movement over the Automatic Identification System that is not real. It happens '
-     'when the ship\'s satellite-navigation receiver is fed a false signal, or when the AIS messages themselves are forged.'),
+     'A ship broadcasting a position or identity over AIS that is not real, because its satellite signal was faked or its messages were.'),
     ('What is the difference between GNSS jamming and spoofing?',
-     'Jamming drowns the satellite signal, so the receiver loses its fix and positions freeze, drift or disappear. Spoofing replaces '
-     'the signal with a false one, so the receiver reports the wrong place with full confidence. Mild jamming can look like spoofing in the data.'),
+     'Jamming drowns the satellite signal, so positions freeze or vanish. Spoofing replaces it, so the ship reports the wrong place, confidently.'),
     ('Can AIS spoofing be detected?',
-     'A lot of it can be flagged from the data: a report that needs a speed no hull can reach, or many ships reporting the same '
-     'impossible spot. AIS alone rarely shows who did it. Radar satellites can confirm where a ship really was.'),
-    ('Where does it happen?',
-     'Interference is reported regularly in the Baltic, the Black Sea, the eastern Mediterranean and the Gulf, and has been recorded '
-     'off major ports elsewhere, including Los Angeles and Long Beach in January 2026.'),
-    ('Why does it matter outside navigation?',
-     'Because ship positions are evidence. They decide demurrage and laytime, whether a ship entered a sanctioned area, whether a claim '
-     'for a collision or a grounding holds up, and what a voyage is worth. A false position carries into every one of those.'),
+     'Often, from the data: speeds no hull can reach, or many ships in one impossible spot. Radar satellites can confirm the rest.'),
+    ('Where does AIS spoofing happen?',
+     'Regularly in the Baltic, the Black Sea, the eastern Mediterranean and the Gulf, and off ports such as Los Angeles in January 2026.'),
+    ('What does Anopticon do?',
+     'We test reported positions against what the ship can do and against other sources, and publish what we find with the data.'),
 ]
 
 PAGES.append(dict(
-    path='primer/', crumbs=[('Primer', '/primer/')],
-    title='AIS spoofing and GNSS jamming: a primer | Anopticon',
-    desc=('What AIS is, how ship positions go wrong through GNSS jamming, spoofing and forgery, how it shows up in the data, '
-          'and how it can be detected.'),
-    h1='Primer', lede='What AIS is, how a ship ends up broadcasting a position it is not in, and how you can tell.', faq=FAQ,
-    body=f'''
+    path='ais-spoofing/', crumbs=[('AIS spoofing', '/ais-spoofing/')],
+    title='What is AIS spoofing? GNSS jamming explained | Anopticon',
+    desc=('AIS spoofing and GNSS jamming explained: what they are, how they show up in ship-tracking data, how they are detected, '
+          'and why false ship positions matter.'),
+    h1='AIS spoofing', lede='How a ship ends up broadcasting a position it is not in, and how you can tell.', faq=FAQ,
+    body='''
 <section class="band" aria-labelledby="ais-h">
   <div class="wrap duo">
     <h2 id="ais-h" class="h2 reveal">What AIS is</h2>
     <div class="prose reveal">
-      <p>AIS, the Automatic Identification System, is a radio transponder. Every few seconds it broadcasts the ship&rsquo;s identity, position, course and speed on two VHF channels, 161.975 and 162.025&nbsp;MHz, that any receiver can hear: other ships, shore stations, satellites, and the websites that turn it all into a map.</p>
-      <p>Under the SOLAS convention it is carried by ships of 300 gross tonnage and upwards on international voyages, by cargo ships of 500 gross tonnage and upwards, and by all passenger ships. A ship under way sends a position every 2 to 10 seconds; at anchor, every three minutes.</p>
-      <p>The position comes from the ship&rsquo;s own satellite-navigation receiver, usually GPS. AIS repeats whatever that receiver believes, and nothing in the message proves who sent it.</p>
+      <p>Every few seconds a ship&rsquo;s AIS broadcasts its name, position and speed on open radio. The position comes from its satellite receiver, and nothing proves who sent it.</p>
     </div>
   </div>
 </section>
@@ -324,79 +264,54 @@ PAGES.append(dict(
   <div class="wrap">
     <h2 id="ways-h" class="h2 reveal">Jamming, spoofing, forgery</h2>
     <dl class="ways">
-      <div class="reveal"><dt>Jamming</dt><dd>Noise drowns the satellite signal. The receiver loses its fix and positions freeze, drift or vanish. Jamming is cheap and is often a side effect of military activity nearby.</dd></div>
-      <div class="reveal"><dt>Spoofing</dt><dd>A false satellite signal replaces the real one. The receiver reports the wrong place with full confidence, often many ships at once, often on land.</dd></div>
-      <div class="reveal"><dt>Forgery</dt><dd>The AIS messages themselves are made up or changed: a borrowed identity, a ship that does not exist, a track that was never sailed, a transponder switched off.</dd></div>
+      <div class="reveal"><dt>Jamming</dt><dd>Noise drowns the satellite signal. The receiver loses its fix and positions freeze, drift or vanish.</dd></div>
+      <div class="reveal"><dt>Spoofing</dt><dd>A false signal replaces the real one. The receiver reports the wrong place, often many ships at once, often on land.</dd></div>
+      <div class="reveal"><dt>Forgery</dt><dd>The messages themselves are made up or changed: a borrowed identity, a ship that does not exist, a track never sailed.</dd></div>
     </dl>
   </div>
 </section>
 
-<section class="band" aria-labelledby="look-h">
-  <div class="wrap duo">
-    {pic('primer')}
-    <div>
-      <h2 id="look-h" class="h2 reveal">What it looks like</h2>
-      <div class="prose reveal" style="margin-top:24px">
-        <p>A ship that covers a continent between two reports. Dozens of ships stacked on one point inland. Tracks that loop in perfect circles over a headland. A ship that goes silent for an hour and comes back somewhere it could not have reached.</p>
-        <p>One ship doing this is usually a faulty receiver. Many ships doing it in the same place at the same time is interference.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="band band--grey" aria-labelledby="tell-h">
+<section class="band" aria-labelledby="tell-h">
   <div class="wrap duo">
     <h2 id="tell-h" class="h2 reveal">How to tell</h2>
     <div class="prose reveal">
-      <p><b>The hull.</b> A ship has a length, an engine and a top speed. A report that needs more than that did not happen as reported. Our <a href="/research/">research</a> measures how far ship physics holds between sparse reports.</p>
-      <p><b>Other ships.</b> One ship jumping is a fault. Forty jumping to the same place is a pattern, and the pattern often says what kind of interference it was.</p>
-      <p><b>A second source.</b> Radar satellites see ships whether or not they broadcast. Where an image exists for the right place and time, it settles where the ship was.</p>
+      <p><b>The hull.</b> A report that needs more speed than the ship has did not happen.</p>
+      <p><b>Other ships.</b> One ship jumping is a fault. Forty is interference.</p>
+      <p><b>A second source.</b> Radar satellites see ships that do not broadcast.</p>
     </div>
   </div>
 </section>
 '''))
-
-# ---------------------------------------------------------------------------------------------------------- ledger
-HOURS = [('12:00', 2), ('13:00', 1), ('14:00', 1), ('15:00', 4), ('16:00', 17), ('17:00', 36), ('18:00', 22)]
-hours_rows = ''.join(f'<tr><th scope="row">{h}</th><td><span class="bar" style="--v:{v / 36:.3f}"></span></td><td>{v}</td></tr>' for h, v in HOURS)
 
 PAGES.append(dict(
     path='ledger/', crumbs=[('Ledger', '/ledger/')],
     title='AIS spoofing incidents: the Anopticon ledger',
     desc=('Interference events we have recorded in ship AIS data, with dates, ship counts, distances and reported speeds. '
           'Ships near Istanbul reported in Lima, Peru, 10 and 11 October 2026.'),
-    h1='Ledger', lede='Events we have found and recorded ourselves. One entry each, the numbers behind it, and what the data cannot show.',
-    body=f'''
+    h1='Ledger', lede='Events we have recorded ourselves. One entry each, and a note on what the data cannot show.',
+    body='''
 <section class="band" aria-labelledby="e1-h">
   <article class="wrap">
-    <div class="duo">
-      <div>
-        <h2 id="e1-h" class="h2 reveal">Lima, 10 October 2026</h2>
-        <p class="lead reveal" style="margin-top:24px">Ships in the Bosphorus and the western Black Sea broadcast positions inside one 3&nbsp;km patch of inland Lima, Peru, on the far side of the planet.</p>
-      </div>
-      {pic('ledger')}
-    </div>
+    <h2 id="e1-h" class="h2 reveal">Lima, 10 October 2026</h2>
+    <p class="lead reveal measure">Ships in the Bosphorus and the western Black Sea broadcast positions inside one 3&nbsp;km patch of inland Lima, Peru.</p>
     <table class="data reveal">
       <caption class="sr-only">Lima event, 10 October 2026</caption>
       <tbody>
-        <tr><th scope="row">Ships</th><td>49</td><td>247 reports, 41 with names</td></tr>
+        <tr><th scope="row">Ships</th><td>49</td><td>247 reports</td></tr>
         <tr><th scope="row">Window</th><td>12:00&ndash;18:34</td><td>UTC</td></tr>
         <tr class="is-false"><th scope="row">Reported at</th><td>Inland Lima</td><td>12.04&deg; S, 77.05&deg; W</td></tr>
         <tr><th scope="row">Really near</th><td>The Bosphorus</td><td>41.56&deg; N, 28.98&deg; E</td></tr>
         <tr><th scope="row">Apart</th><td>12,221 km</td><td>median, per ship</td></tr>
-        <tr><th scope="row">Spread</th><td>965 m</td><td>median from the centre of the patch</td></tr>
         <tr><th scope="row">Reported speed</th><td>94.9 kn</td><td>median; fastest 102.0</td></tr>
       </tbody>
     </table>
-    <h3 class="sub reveal">Ships in the patch, by hour (UTC)</h3>
-    <table class="hours reveal"><caption class="sr-only">Ships per hour</caption><tbody>{hours_rows}</tbody></table>
   </article>
 </section>
 
 <section class="band band--grey" aria-labelledby="e2-h">
   <article class="wrap">
     <h2 id="e2-h" class="h2 reveal">Lima, 11 October 2026</h2>
-    <p class="lead reveal measure" style="margin-top:24px">The same patch, the next morning, shorter.</p>
+    <p class="lead reveal measure">The same patch, the next morning, shorter.</p>
     <table class="data reveal">
       <caption class="sr-only">Lima event, 11 October 2026</caption>
       <tbody>
@@ -409,96 +324,82 @@ PAGES.append(dict(
   </article>
 </section>
 
-<section class="band" aria-labelledby="how-h">
-  <div class="wrap duo">
-    <h2 id="how-h" class="h2 reveal">How we found it</h2>
-    <div class="prose reveal">
-      <p>No single report gave it away. What stood out was many ships, with no earlier history in the area, arriving in one small patch over a few hours, most of them last seen on the other side of the world. We cluster reports like that into one event, check every ship against its own earlier track, and keep the reports as they were received.</p>
-    </div>
-  </div>
-</section>
-
 <section class="band band--black" aria-labelledby="stop-h">
   <div class="wrap duo">
     <h2 id="stop-h" class="h2 reveal">What it does not show</h2>
-    <p class="lead reveal">The positions were moved, not sailed, and the pattern fits interference with satellite navigation. The data alone does not say who or what did it, and we do not guess.</p>
+    <p class="lead reveal">The positions were moved, not sailed, and the pattern fits interference with satellite navigation. The data alone does not say who or what did it.</p>
+  </div>
+</section>
+'''))
+
+PAGES.append(dict(
+    path='projects/', crumbs=[('Projects', '/projects/')],
+    title='Projects: Nereus, Argus and Aether | Anopticon',
+    desc='One core, one domain at a time: Nereus for ships at sea, Argus for navies and coast guards, Aether for aircraft.',
+    h1='Projects', lede='One core: test what a machine reports against what the physical world allows. One domain at a time.',
+    body='''
+<section class="band" aria-label="Projects">
+  <div class="wrap close__links" style="margin-top:0">
+    <a href="/projects/nereus/"><span>Nereus. Ships at sea.</span><span>Now</span></a>
+    <a href="/projects/argus/"><span>Argus. Navies and coast guards.</span><span>Next</span></a>
+    <a href="/projects/aether/"><span>Aether. Aircraft.</span><span>Later</span></a>
   </div>
 </section>
 '''))
 
 
-# -------------------------------------------------------------------------------------------------------- projects
-PAGES.append(dict(
-    path='projects/', crumbs=[('Projects', '/projects/')],
-    title='Projects: Nereus, Argus and Aether | Anopticon',
-    desc='One core, one domain at a time: Nereus for ships at sea, Argus for navies and coast guards, Aether for aircraft.',
-    h1='Projects', lede='One core: test what a machine reports against what the physical world allows. One domain at a time, each one only when the last has earned it.',
-    body='\n'.join(f'''
-<section class="band{' band--grey' if i % 2 else ''}" aria-labelledby="p-{k}">
-  <div class="wrap duo">
-    {pic(k)}
-    <div>
-      <p class="case__when reveal">{t}</p>
-      <h2 class="h2 reveal" id="p-{k}" style="margin-top:14px">{n}</h2>
-      <p class="lead reveal" style="margin-top:20px">{w}.</p>
-      <p class="reveal" style="margin-top:24px"><a class="link" href="/projects/{k}/">About {n}</a></p>
-    </div>
-  </div>
-</section>''' for i, (k, n, w, t) in enumerate(PROJ))))
+OTHERS = [('nereus', 'Nereus', 'Ships at sea', 'Now'), ('argus', 'Argus', 'Navies and coast guards', 'Next'),
+          ('aether', 'Aether', 'Aircraft', 'Later')]
 
 
-def project(i, title, desc, lede, sections):
-    k, n, w, t = PROJ[i]
-    prev_, next_ = PROJ[i - 1], PROJ[(i + 1) % len(PROJ)]
-    secs = ''.join(f'''
-<section class="band{' band--grey' if j % 2 else ''}" aria-labelledby="{k}-{j}">
-  <div class="wrap duo">
-    <h2 id="{k}-{j}" class="h2 reveal">{h}</h2>
-    <div class="prose reveal">{''.join(f'<p>{p}</p>' for p in ps)}</div>
-  </div>
-</section>''' for j, (h, ps) in enumerate(sections))
+def project(key, name, title, desc, lede, img, paras):
     return dict(
-        path=f'projects/{k}/', crumbs=[('Projects', '/projects/'), (n, f'/projects/{k}/')],
-        title=title, desc=desc, h1=n, lede=lede,
+        path=f'projects/{key}/', crumbs=[('Projects', '/projects/'), (name, f'/projects/{key}/')],
+        title=title, desc=desc, h1=name, lede=lede,
         body=f'''
-<section class="band" aria-label="Picture"><div class="wrap">{pic(k, 'print print--wide', lazy=False)}</div></section>
-{secs}
+<section class="band" aria-labelledby="{key}-h">
+  <div class="wrap duo">
+    {picture(*img)}
+    <div class="prose reveal"><h2 id="{key}-h" class="sr-only">{name}</h2>{''.join(f'<p>{p}</p>' for p in paras)}</div>
+  </div>
+</section>
+
 <section class="close" aria-label="Other projects">
-  <div class="wrap">{rows([(f'/projects/{prev_[0]}/', f'{prev_[1]}. {prev_[2]}.', 'Previous'), (f'/projects/{next_[0]}/', f'{next_[1]}. {next_[2]}.', 'Next'), ('/projects/', 'All projects', 'Projects')])}</div>
+  <div class="wrap close__links" style="margin-top:0">{''.join(f'<a href="/projects/{k}/"><span>{n}. {w}.</span><span>{t}</span></a>' for k, n, w, t in OTHERS if k != key)}
+    <a href="/projects/"><span>All projects</span><span>Projects</span></a>
+  </div>
 </section>
 ''')
 
 
 PAGES.append(project(
-    0, 'Project Nereus: independent records of ship positions at sea | Anopticon',
-    'Project Nereus is our work at sea: telling real ship positions from jammed, spoofed and forged ones, and keeping records anyone can check.',
-    'Ships at sea. What we are building now.',
-    [('The story', ['In the Greek story, Nereus, the old man of the sea, would answer any question truthfully if you could hold on to him while he changed shape: a lion, a serpent, water. Heracles held on.',
-                    'Ship data changes shape the same way, and the job is to hold on until it tells you what happened.']),
-     ('What it does', ['We read AIS from several networks, keep every report as it was received, and test each one against a calibrated model of what that ship could have done since its last report.',
-                       'Where many ships go wrong in one place, we open a single event and describe it: where they were, where they said they were, when, and how far apart. Every finding goes into a record with the reports behind it and a script that recomputes the numbers.']),
-     ('Who it is for', ['People who need to know where a ship really was and may have to prove it to someone else: charterers and owners in a dispute, claims handlers and P&amp;I correspondents, admiralty lawyers and the experts they hire.',
-                        'We are working with a few <a href="/partners/">design partners</a> on real cases now.']),
-     ('Where it stands', ['Working today: live scoring of AIS against ship physics, clustering of area events like Lima, and records whose numbers anyone can rerun.',
-                          'Still to come: our own receivers at chokepoints, trusted timestamps on the archive, and purchased radar imagery for disputed cases.'])]))
+    'nereus', 'Nereus', 'Project Nereus: checking ship positions at sea | Anopticon',
+    'Project Nereus is our work at sea: telling real ship positions from jammed, spoofed and forged ones.',
+    'Ships at sea. What we are doing now.',
+    ('/assets/img/nereus-lekythos.jpg', 1600, 1285,
+     "Black-figure painting on an oil jar: Heracles grips Nereus, who has a fish's tail and a lion springing from his back.",
+     'Heracles and Nereus. Lekythos by the Istanbul Painter, about 590 BC. Louvre, CA 823.'),
+    ['In the Greek story, Nereus would answer any question if you could hold on to him while he changed shape. Heracles held on.',
+     'Nereus is our work at sea: shipping, insurance and disputes, where someone needs to know where a ship actually was.']))
 PAGES.append(project(
-    1, 'Project Argus: position checks for navies and coast guards | Anopticon',
-    'Project Argus takes our ship-position checks to the navies and coast guards whose job is to watch the sea.',
-    'Navies and coast guards. Next, once the sea work has earned it.',
-    [('The story', ['Argus Panoptes had a hundred eyes and never closed them all. Hermes lulled every one of them to sleep anyway.',
-                    'Watching everything is not the same as knowing what is true.']),
-     ('What it would do', ['Find ships that go dark, ships that meet at sea without saying so, and ships whose identity does not match their hull, by putting AIS next to radar satellites and radio.',
-                           'Built on the same core as Nereus, with the same rule: say what the evidence supports and where it stops.']),
-     ('Where it stands', ['A radar-first scan that looks for ships AIS does not explain already runs in test. Argus starts properly after Nereus has paying customers and a published method with its error rates.'])]))
+    'argus', 'Argus', 'Project Argus: for navies and coast guards | Anopticon',
+    'Project Argus takes our ship-position checks to the navies and coast guards who watch the sea.',
+    'Navies and coast guards. Next.',
+    ('/assets/img/argus-vase.jpg', 1090, 430,
+     'Line drawing from a Greek vase: Hermes strikes Argus, whose body is covered in eyes.',
+     'Hermes kills Argus. Drawing after an Athenian red-figure vase, W. H. Roscher, 1890.'),
+    ['Argus had a hundred eyes, and Hermes still got past him.',
+     'Argus is for the people whose job is watching the sea, built on the same core as Nereus.']))
 PAGES.append(project(
-    2, 'Project Aether: position checks for aircraft | Anopticon',
-    'Project Aether asks the same question of aircraft, which broadcast their positions too, and whose positions are jammed and spoofed in the same way.',
+    'aether', 'Aether', 'Project Aether: position checks for aircraft | Anopticon',
+    'Project Aether asks the same question of aircraft, which broadcast their positions too.',
     'Aircraft. Later.',
-    [('The story', ['Aether is the bright upper air of the Greek sky. In Bruegel&rsquo;s engraving a warship holds its course while Icarus falls out of the sky above it.']),
-     ('What it would do', ['Aircraft broadcast where they are over ADS-B, and those positions are hit by the same jamming and spoofing as ships. The method that finds many ships reporting one impossible place applies to aircraft almost unchanged.']),
-     ('Where it stands', ['An intention, not a product. It comes after the sea and the navies, and only if the core has proved it carries over.'])]))
+    ('/assets/img/aether-icarus.jpg', 1600, 1228,
+     'Engraving of an armed three-masted ship under sail; in the sky, Icarus falls from the sun.',
+     'Armed three-master with Daedalus and Icarus in the sky. After Pieter Bruegel the Elder, 1561&ndash;65. The Met.'),
+    ['Aircraft broadcast where they are as well, and those broadcasts get jammed and spoofed in the same way.',
+     'Aether is that work, once the sea is done properly.']))
 
-# -------------------------------------------------------------------------------------------------------- research
 PAGES.append(dict(
     path='research/', crumbs=[('Research', '/research/')], schema_extra=[PAPER],
     title='Research: ship physics under sparse AIS sampling | Anopticon',
@@ -514,42 +415,21 @@ PAGES.append(dict(
       <p class="reveal"><a class="btn" href="{ZENODO}">Code and data on Zenodo</a></p>
     </div>
     <div class="prose reveal">
-      <p>On shore you only see a ship through its AIS reports, seconds to minutes apart. Textbook ship physics describes continuous motion. We measured what survives the gap: what those reports let the models predict, what they let you work out about a particular hull, and what they let you rule out.</p>
-      <p>The data: 47,739,929 reports from four networks over eleven days in the Baltic and North Sea, tested on ships the models had not seen.</p>
-    </div>
-  </div>
-</section>
-
-<section class="band band--grey" aria-labelledby="f-h">
-  <div class="wrap">
-    <h2 id="f-h" class="h2 reveal">What we found</h2>
-    <table class="data data--plain reveal">
-      <caption class="sr-only">Findings</caption>
-      <tbody>
-        <tr><th scope="row">Turns</th><td>On course changes of 45&deg; or more, standard turn models place the ship about 22% worse at the 95th percentile than simply averaging the two reports.</td></tr>
-        <tr><th scope="row">Steering</th><td>A hull&rsquo;s steering constants can&rsquo;t be identified from AIS, because AIS carries no rudder angle. Fitting them anyway makes predictions worse.</td></tr>
-        <tr><th scope="row">Speed</th><td>A Holtrop&ndash;Mennen speed screen is crossed by 4 of 8,472 ships up to Froude number 0.45, and by 181 of 199 above it, most of them fast passenger craft.</td></tr>
-        <tr><th scope="row">So</th><td>Between sparse reports, ship physics is good for bounds, not for filling in the gaps. That is exactly what a check needs.</td></tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<section class="band" aria-labelledby="why-h">
-  <div class="wrap duo">
-    {pic('research')}
-    <div>
-      <h2 id="why-h" class="h2 reveal">Why it matters to us</h2>
-      <div class="prose reveal" style="margin-top:24px">
-        <p>Every check we run asks whether a ship could have done what its reports say. The answer is only as good as the physics behind it, so we measured where that physics holds and where it does not before relying on it.</p>
-        <p>Next: a method note on our own detector, with its error rates on real data.</p>
-      </div>
+      <p>What can AIS reports, seconds to minutes apart, tell ship physics? We measured it on 47.7 million reports and ships the models had not seen.</p>
+      <table class="data data--plain">
+        <caption class="sr-only">Findings</caption>
+        <tbody>
+          <tr><th scope="row">Turns</th><td>On course changes of 45&deg; or more, standard turn models place the ship about 22% worse at the 95th percentile than simply averaging the two reports.</td></tr>
+          <tr><th scope="row">Steering</th><td>A hull&rsquo;s steering constants can&rsquo;t be identified from AIS, because AIS carries no rudder angle.</td></tr>
+          <tr><th scope="row">Speed</th><td>A Holtrop&ndash;Mennen speed screen is crossed by 4 of 8,472 ships up to Froude number 0.45, and by 181 of 199 above it.</td></tr>
+          <tr><th scope="row">So</th><td>Between sparse reports, ship physics is good for bounds, not for filling in the gaps.</td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
 '''))
 
-# ------------------------------------------------------------------------------------------------------------ team
 PAGES.append(dict(
     path='team/', crumbs=[('Team', '/team/')], schema_extra=PEOPLE,
     title='Team: Vishmayraj Zala and Kathan Patel | Anopticon',
@@ -563,7 +443,7 @@ PAGES.append(dict(
       <p class="lead reveal">Founder. Runs operations.</p>
     </div>
     <div class="reveal">
-      <p>Builds real-time data systems. Google Summer of Code 2026 contributor with OSGeo, on the istSOS4 project. Wrote the Anopticon engine and is the corresponding author of our first paper.</p>
+      <p>Builds real-time data systems. Google Summer of Code 2026 contributor with OSGeo. Corresponding author of our first paper.</p>
       <ul class="buttons">
         <li><a class="btn" href="https://github.com/Vishmayraj" rel="me">GitHub</a></li>
         <li><a class="btn" href="https://www.linkedin.com/in/vishmayraj-zala" rel="me">LinkedIn</a></li>
@@ -581,7 +461,7 @@ PAGES.append(dict(
       <p class="lead reveal">Co-founder. Leads machine learning research.</p>
     </div>
     <div class="reveal">
-      <p>Student researcher. Works on the data and on checking what the engine finds, and co-authored our first paper.</p>
+      <p>Student researcher. Works on the data and on checking what the engine finds.</p>
       <ul class="buttons">
         <li><a class="btn" href="https://github.com/KathanPatel1310">GitHub</a></li>
         <li><a class="btn" href="https://www.linkedin.com/in/kathan-patel-0235a3354">LinkedIn</a></li>
@@ -589,133 +469,54 @@ PAGES.append(dict(
     </div>
   </div>
 </section>
-
-<section class="close" aria-label="More">
-  <div class="wrap">{rows([('/join/', 'We are looking for people', 'Join us'), ('/about/', 'Why we exist', 'About')])}</div>
-</section>
 '''))
 
-# -------------------------------------------------------------------------------------------------------- partners
 PAGES.append(dict(
-    path='partners/', crumbs=[('Design partners', '/partners/')],
-    title='Design partners: bring us a real case | Anopticon',
-    desc=('Anopticon is working with three to five early design partners on real cases where a ship\'s position matters: '
-          'claims, disputes and charters. What you get, what we ask, and how to start.'),
-    h1='Design partners', lede='We are working with three to five early partners on real cases. If a ship&rsquo;s position matters to your work, this is how it goes.',
-    body=f'''
-<section class="band" aria-labelledby="who-h">
+    path='about/', crumbs=[('About', '/about/')],
+    title='About Anopticon: what we believe and what the name means',
+    desc='When something does not make sense, ask why. What Anopticon believes, how it works, and why it is called Anopticon.',
+    h1='About', lede='When something does not make sense, ask why.',
+    body='''
+<section class="band" aria-labelledby="name-h">
   <div class="wrap duo">
-    <h2 id="who-h" class="h2 reveal">Who it is for</h2>
+    <h2 id="name-h" class="h2 reveal">Why Anopticon</h2>
     <div class="prose reveal">
-      <p>Charterers and owners with a disputed voyage. Claims handlers and P&amp;I correspondents. Admiralty lawyers and the experts they instruct. Anyone who has had to argue about where a ship was, and wished the data could be checked by both sides.</p>
+      <p>The panopticon is a prison where one hidden guard sees everyone. Take away the &ldquo;pan&rdquo;: the tower stays, but anyone can look inside.</p>
     </div>
   </div>
 </section>
 
-<section class="band band--black" aria-labelledby="get-h">
-  <div class="wrap">
-    <h2 id="get-h" class="h2 reveal">What you get, what we ask</h2>
-    <dl class="ways">
-      <div class="reveal"><dt>Your cases, looked at</dt><dd>We work up to three of your real cases into records: what the positions show, what they cannot show, and the data behind both.</dd></div>
-      <div class="reveal"><dt>A say in the product</dt><dd>You tell us what a record has to contain to be useful in your work, and we build that, not what we imagined.</dd></div>
-      <div class="reveal"><dt>What we ask</dt><dd>Real cases under NDA, a small fee per case that is credited in full if you carry on with us, and the outcome of each case once it closes.</dd></div>
-    </dl>
-  </div>
-</section>
-
-<section class="band" aria-labelledby="ind-h">
+<section class="band band--black" aria-labelledby="how-h">
   <div class="wrap duo">
-    {pic('partners')}
-    <div>
-      <h2 id="ind-h" class="h2 reveal">One thing to know</h2>
-      <div class="prose reveal" style="margin-top:24px">
-        <p>We are independent. Our fee never depends on the outcome, and a record says what the data shows even when that hurts the side that asked for it. That is the only way a record is worth showing to the other side.</p>
-        <p>Everything is covered by a written agreement on scope, data rights, confidentiality and liability before any work starts.</p>
-      </div>
+    <h2 id="how-h" class="h2 reveal">Question. Investigate. Verify.</h2>
+    <div class="prose reveal">
+      <p>Ships, aircraft and sensors all report where they are. More of those reports are wrong, and few people check.</p>
+      <p>We test each report against what the world allows, and hand over the data so anyone can check us.</p>
     </div>
   </div>
 </section>
 
-<section class="band" data-tone="orange" aria-labelledby="start-h">
+<section class="band" aria-labelledby="say-h">
   <div class="wrap duo">
-    <h2 id="start-h" class="h2 reveal">How to start</h2>
-    <div class="reveal">
-      <p class="lead">Send us the ship (name or MMSI), the dates, and one line on what is in dispute. We will reply with whether the data can say anything useful.</p>
-      <p style="margin-top:24px"><a class="btn btn--solid" href="mailto:{MAIL}?subject=Design%20partner%3A%20a%20case">Send a case</a></p>
-    </div>
+    <h2 id="say-h" class="h2 reveal">an-OP-ti-kon</h2>
+    <p class="lead reveal">Stress on the second syllable. Founded in 2026, in Gujarat. <a class="link" href="/projects/">Projects</a></p>
   </div>
 </section>
 '''))
 
-# ------------------------------------------------------------------------------------------------------------ join
-PAGES.append(dict(
-    path='join/', crumbs=[('Join us', '/join/')],
-    title='Join Anopticon: careers',
-    desc=('Work at Anopticon on ship positions, GNSS interference and independent records. Who we are looking for, how we work, '
-          'and how to apply by email.'),
-    h1='Join us', lede='We are two people. The next few will shape what this becomes.',
-    body=f'''
-<section class="band" aria-labelledby="look-h">
-  <div class="wrap duo">
-    <h2 id="look-h" class="h2 reveal">Who we are looking for</h2>
-    <div class="prose reveal">
-      <p>People who notice when something does not add up, and go and find out why instead of rounding it off. People who would rather say &ldquo;the data stops here&rdquo; than make something up to fill the gap.</p>
-      <p>We do not have job titles yet. These are the kinds of people we want to hear from.</p>
-    </div>
-  </div>
-</section>
-
-<section class="band band--black" aria-labelledby="kinds-h">
-  <div class="wrap">
-    <h2 id="kinds-h" class="h2 reveal">The kinds of work</h2>
-    <dl class="ways">
-      <div class="reveal"><dt>From the sea</dt><dd>Master mariners, navigating officers, VTS operators, surveyors, claims and P&amp;I people. You know what a real track looks like and what a dispute really turns on.</dd></div>
-      <div class="reveal"><dt>From the signal</dt><dd>GNSS and radio engineers, SAR and remote-sensing people, anyone who has decoded AIS or ADS-B for fun.</dd></div>
-      <div class="reveal"><dt>From the data</dt><dd>Engineers who build pipelines that keep the raw truth, statisticians who measure their own error, and naval architects who know what a hull can and cannot do.</dd></div>
-    </dl>
-  </div>
-</section>
-
-<section class="band" aria-labelledby="how-h">
-  <div class="wrap duo">
-    {pic('join')}
-    <div>
-      <h2 id="how-h" class="h2 reveal">How we work</h2>
-      <div class="prose reveal" style="margin-top:24px">
-        <p>Small, in Gujarat, and in the open: our methods are published and our code is checked by people outside the company. We write down what we got wrong and fix it where people will see it.</p>
-        <p>It is early. That means real ownership and real uncertainty, and we will be straight with you about both.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="band" data-tone="orange" aria-labelledby="apply-h">
-  <div class="wrap duo">
-    <h2 id="apply-h" class="h2 reveal">How to apply</h2>
-    <div class="reveal">
-      <p class="lead">Email your CV and a few lines on something you found that did not add up, and what you did about it. No cover letter needed.</p>
-      <p style="margin-top:24px"><a class="btn btn--solid" href="mailto:{MAIL}?subject=Joining%20Anopticon">Send your CV</a></p>
-    </div>
-  </div>
-</section>
-'''))
-
-# --------------------------------------------------------------------------------------------------------- contact
 PAGES.append(dict(
     path='contact/', crumbs=[('Contact', '/contact/')],
     title='Contact Anopticon',
-    desc='Write to Anopticon about a ship to check, a partnership, a job, research or press: vishmayraj@anopticon.com. Gujarat, India.',
-    h1='Contact', lede='A ship to check, a question, a story or a CV. One address for all of it.',
+    desc='Write to Anopticon about a ship to check, research or press: vishmayraj@anopticon.com. Gujarat, India.',
+    h1='Contact', lede='A ship to check, a question, a story. Send the ship and the dates if you have them.',
     body=f'''
 <section class="rows" aria-label="Contact details">
   <a class="row row--orange" href="mailto:{MAIL}?subject=Anopticon"><span>vishmayraj@<wbr>anopticon.com</span><span aria-hidden="true">&rarr;</span></a>
-  <a class="row" href="/partners/"><span>A case to look at</span><span aria-hidden="true">&rarr;</span></a>
-  <a class="row" href="/join/"><span>Working with us</span><span aria-hidden="true">&rarr;</span></a>
-  <a class="row" href="/team/"><span>Vishmayraj Zala and Kathan Patel</span><span aria-hidden="true">&rarr;</span></a>
+  <a class="row" href="/team/#vishmayraj-zala"><span>Vishmayraj Zala, founder</span><span aria-hidden="true">&rarr;</span></a>
+  <a class="row" href="/team/#kathan-patel"><span>Kathan Patel, co-founder</span><span aria-hidden="true">&rarr;</span></a>
   <div class="row"><span>Gujarat, India</span></div>
 </section>
 '''))
-
 
 # ---------------------------------------------------------------------------------------------------------- shared
 FONTS = 'https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;600&family=Schibsted+Grotesk:wght@400;600;800&display=swap'
@@ -772,10 +573,10 @@ def footer(page):
 <footer class="foot">
   <div class="wrap foot__grid">
     <p class="foot__what">{WHAT} Ships at sea now; navies and coast guards next; aircraft after. <a href="mailto:{MAIL}">{MAIL}</a></p>
-    <ul><li><a href="/projects/">Projects</a></li><li><a href="/ledger/">Ledger</a></li><li><a href="/research/">Research</a></li><li><a href="/primer/">Primer</a></li></ul>
-    <ul><li><a href="/partners/">Design partners</a></li><li><a href="/about/">About</a></li><li><a href="/team/">Team</a></li><li><a href="/join/">Join us</a></li><li><a href="/contact/">Contact</a></li></ul>
+    <ul><li><a href="/ais-spoofing/">AIS spoofing</a></li><li><a href="/ledger/">Ledger</a></li><li><a href="/research/">Research</a></li></ul>
+    <ul><li><a href="/projects/">Projects</a></li><li><a href="/team/">Team</a></li><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li></ul>
   </div>
-  <p class="wrap foot__legal">&copy; {TODAY[:4]} Anopticon, Gujarat, India. All pictures are public domain and credited where they appear.</p>
+  <p class="wrap foot__legal">&copy; {TODAY[:4]} Anopticon, Gujarat, India. Sources are linked on each page; pictures are public domain.</p>
 </footer>
 {world}<script src="/assets/site.js" defer></script>
 '''
@@ -838,7 +639,7 @@ def head(page):
 def render(page):
     body = page['body']
     if not page.get('home'):
-        body = '<main id="main">\n' + page_head(page) + body + (faq_html(page['faq']) if page.get('faq') else '') + '</main>\n'
+        body = '<main id="main">\n' + page_head(page) + myth(page['path']) + body + (faq_html(page['faq']) if page.get('faq') else '') + '</main>\n'
     return head(page) + nav(page) + body + footer(page) + '</body>\n</html>\n'
 
 

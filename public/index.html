@@ -3,23 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Anopticon | Independent records of what actually happened at sea</title>
-<meta name="description" content="Anopticon tests what machines report against what the physical world allows, starting with ship positions at sea: AIS spoofing, GNSS jamming and falsified tracks, checked and kept as records anyone can verify.">
+<title>Anopticon | Telemetry integrity, starting at sea: AIS spoofing and GNSS jamming</title>
+<meta name="description" content="Anopticon tests what machines report against what the physical world allows, starting with ships at sea. Real cases of AIS spoofing and GNSS jamming, from the 2013 &quot;pwned&quot; ship to the Lima pile-up of October 2026.">
 <link rel="canonical" href="https://anopticon.com/">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#0A0A0A">
 <meta property="og:site_name" content="Anopticon">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Anopticon | Independent records of what actually happened at sea">
-<meta property="og:description" content="Anopticon tests what machines report against what the physical world allows, starting with ship positions at sea: AIS spoofing, GNSS jamming and falsified tracks, checked and kept as records anyone can verify.">
+<meta property="og:title" content="Anopticon | Telemetry integrity, starting at sea: AIS spoofing and GNSS jamming">
+<meta property="og:description" content="Anopticon tests what machines report against what the physical world allows, starting with ships at sea. Real cases of AIS spoofing and GNSS jamming, from the 2013 &quot;pwned&quot; ship to the Lima pile-up of October 2026.">
 <meta property="og:url" content="https://anopticon.com/">
 <meta property="og:image" content="https://anopticon.com/assets/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Anopticon. Ships that were not where they said.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Anopticon | Independent records of what actually happened at sea">
-<meta name="twitter:description" content="Anopticon tests what machines report against what the physical world allows, starting with ship positions at sea: AIS spoofing, GNSS jamming and falsified tracks, checked and kept as records anyone can verify.">
+<meta name="twitter:title" content="Anopticon | Telemetry integrity, starting at sea: AIS spoofing and GNSS jamming">
+<meta name="twitter:description" content="Anopticon tests what machines report against what the physical world allows, starting with ships at sea. Real cases of AIS spoofing and GNSS jamming, from the 2013 &quot;pwned&quot; ship to the Lima pile-up of October 2026.">
 <meta name="twitter:image" content="https://anopticon.com/assets/og.png">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
@@ -126,8 +126,8 @@
    "@type": "WebPage",
    "@id": "https://anopticon.com/#page",
    "url": "https://anopticon.com/",
-   "name": "Anopticon | Independent records of what actually happened at sea",
-   "description": "Anopticon tests what machines report against what the physical world allows, starting with ship positions at sea: AIS spoofing, GNSS jamming and falsified tracks, checked and kept as records anyone can verify.",
+   "name": "Anopticon | Telemetry integrity, starting at sea: AIS spoofing and GNSS jamming",
+   "description": "Anopticon tests what machines report against what the physical world allows, starting with ships at sea. Real cases of AIS spoofing and GNSS jamming, from the 2013 \"pwned\" ship to the Lima pile-up of October 2026.",
    "isPartOf": {
     "@id": "https://anopticon.com/#site"
    },
@@ -147,84 +147,142 @@
 <nav class="nav" aria-label="Main">
   <a class="nav__mark" href="/">Anopticon</a>
   <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
-  <ul class="nav__links" id="menu"><li><a href="/projects/">Projects</a></li><li><a href="/ledger/">Ledger</a></li><li><a href="/research/">Research</a></li><li><a href="/partners/">Partners</a></li><li><a href="/about/">About</a></li><li><a href="/join/">Join us</a></li></ul>
+  <ul class="nav__links" id="menu"><li><a href="/ais-spoofing/">AIS spoofing</a></li><li><a href="/ledger/">Ledger</a></li><li><a href="/research/">Research</a></li><li><a href="/team/">Team</a></li><li><a href="/contact/">Contact</a></li></ul>
 </nav>
 <main id="main">
 <header class="open wrap" data-tone="black">
-  <h1 class="open__h">Records of what actually happened.</h1>
+  <h1 class="open__h">Ships that were not where they said.</h1>
   <div class="open__row">
-    <p>Anopticon tests what machines report against what the physical world allows. We start at sea. Ships broadcast their own positions every few seconds, and those broadcasts are now jammed, spoofed and faked.</p>
-    <p class="open__count"><a href="/partners/">Bring us a case</a></p>
+    <p>Anopticon tests what machines report against what the physical world allows. We start with ships. Five times they were wrong:</p>
+    <p class="open__count">2013 &middot; 2019 &middot; 2019 &middot; 2026 &middot; 2026</p>
   </div>
 </header>
 
-<section class="home-img" data-tone="black" aria-label="Picture">
-  <div class="wrap"><figure class="print print--wide reveal"><img src="/assets/img/wadsworth-dazzle-ships.jpg" width="1280" height="1600" alt="Painting of a ship in dry dock, its hull covered in clashing black, white and grey stripes, with workers below." fetchpriority="high" decoding="async"><figcaption>Dazzle-ships in Drydock at Liverpool, Edward Wadsworth, 1919. Ships were painted like this to make an enemy misjudge their course.</figcaption></figure></div>
-</section>
-
-<section class="band" data-tone="white" aria-labelledby="do-h">
+<section class="band myth" aria-label="Picture">
   <div class="wrap duo">
-    <h2 class="h2 reveal" id="do-h">What we do</h2>
-    <div class="prose reveal">
-      <p>Every large ship reports its position over AIS, a radio system with no signature on its messages. The position comes from the ship&rsquo;s satellite receiver, and that receiver can be jammed or fooled. Ports, insurers, charterers, lawyers and navies all rely on those positions anyway.</p>
-      <p>We check them. Each report is tested against what that ship can physically do, against the ships around it, and against independent sources such as radar satellites. What we find goes into a record, with the data and the method, so the other side can check it too.</p>
-      <p>New to this? The <a href="/primer/">primer</a> explains how positions go wrong.</p>
-    </div>
+    <figure class="print reveal"><img src="/assets/img/hermes-vase.jpg" width="1067" height="1600" alt="Black-figure vase: Hermes running, a ram on his shoulders." loading="lazy" decoding="async"><figcaption>Hermes, black-figure oinochoe, Louvre F 159.</figcaption></figure>
+    <p class="lead reveal myth__line">Hermes carried the messages of the gods. He was also the god of thieves.</p>
   </div>
 </section>
-
-<section class="band" data-tone="black" aria-labelledby="proj-h">
-  <div class="wrap">
-    <div class="duo">
-      <h2 class="h2 reveal" id="proj-h">Projects</h2>
-      <p class="lead reveal">One core, one domain at a time: sea first, then the people who watch it, then the air.</p>
-    </div>
-    <nav class="close__links" aria-label="Pages"><a href="/projects/nereus/"><span>Nereus. Ships at sea.</span><span>Now</span></a><a href="/projects/argus/"><span>Argus. Navies and coast guards.</span><span>Next</span></a><a href="/projects/aether/"><span>Aether. Aircraft.</span><span>Later</span></a></nav>
-  </div>
-</section>
-
-<section class="band" data-tone="white" aria-labelledby="ledger-h">
-  <div class="wrap duo">
-    <figure class="print reveal"><img src="/assets/img/vinckeboons-delaware-1639.jpg" width="1600" height="1124" alt="Hand-drawn sea chart of a bay and river with compass lines and a compass rose." loading="lazy" decoding="async"><figcaption>Chart of the South River in New Netherland (Delaware Bay), Joan Vinckeboons, 1639. Public domain.</figcaption></figure>
+<section class="case" data-tone="white" aria-labelledby="case-pwned">
+  <div class="wrap case__grid">
     <div>
-      <h2 class="h2 reveal" id="ledger-h">The ledger</h2>
-      <p class="lead reveal">On 10 October 2026, 49 ships near Istanbul reported themselves in inland Peru, 12,221&nbsp;km away. We found it, measured it and wrote it down.</p>
-      <p class="reveal" style="margin-top:24px"><a class="link" href="/ledger/">Read the entry</a></p>
+      <p class="case__when reveal">October 2013. Off Italy.</p>
+      <h2 class="case__h reveal" id="case-pwned">A ship that never existed sailed the word &ldquo;pwned&rdquo;.</h2>
+      <p class="case__p reveal">Trend Micro researchers made it with a 700-euro radio. Public tracking maps showed it.</p>
+      <p class="case__src reveal"><a href="https://www.technologyreview.com/2013/10/18/82918/ship-tracking-hack-makes-tankers-vanish-from-view/">MIT Technology Review</a>, 18 October 2013</p>
     </div>
+    <div class="case__art" data-art><svg viewBox="0 0 920 360" role="img" aria-label="A ship's track that spells the word pwned">
+  <path class="draw ink" d="M40 270 L40 90 L160 90 L160 180 L40 180 L220 90 L250 270 L280 180 L310 270 L340 90 L400 270 L400 90 L520 270 L520 90 L700 90 L580 90 L580 270 L700 270 L580 180 L670 180 L760 90 L760 270 L850 270 L880 240 L880 120 L850 90 L760 90" fill="none" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle class="pop fillmk" data-at=".98" cx="760" cy="90" r="11"/>
+  <text class="label" x="40" y="330">A fake ship, off Italy</text>
+</svg></div>
   </div>
 </section>
-
-<section class="band" data-tone="orange" aria-labelledby="partners-h">
-  <div class="wrap duo">
-    <h2 class="h2 reveal" id="partners-h">Design partners</h2>
-    <div class="reveal">
-      <p class="lead">We are working with a small number of early partners on real cases: claims, disputes, charters. If a ship&rsquo;s position matters to you, we would like to look at it.</p>
-      <p style="margin-top:24px"><a class="btn btn--solid" href="/partners/">How it works</a></p>
-    </div>
-  </div>
-</section>
-
-<section class="band" data-tone="white" aria-labelledby="research-h">
-  <div class="wrap duo">
+<section class="case" data-tone="black" aria-labelledby="case-reyes">
+  <div class="wrap case__grid">
     <div>
-      <h2 class="h2 reveal" id="research-h">Research</h2>
-      <p class="lead reveal">Our first paper measures how far ship physics can be trusted between AIS reports, on 47.7 million real ones. The code is public.</p>
-      <p class="reveal" style="margin-top:24px"><a class="link" href="/research/">The paper</a></p>
+      <p class="case__when reveal">June 2019. Point Reyes, California.</p>
+      <h2 class="case__h reveal" id="case-reyes">A boat in Nigeria went round in circles over California.</h2>
+      <p class="case__p reveal">For two weeks, a crew boat in Nigeria broadcast a loop over Point Reyes. Part of it was on land.</p>
+      <p class="case__src reveal"><a href="https://www.thelog.com/snw/ships-AIS-broadcasts-draw-GPS-crop-circles-thousands-of-miles-away-from-actual-locations/">The Log</a>, 28 August 2020</p>
     </div>
-    <figure class="print reveal"><img src="/assets/img/holbein-ambassadors.jpg" width="1600" height="1577" alt="Two men in a green-curtained room, with a celestial globe, sundials and a quadrant on the table between them." loading="lazy" decoding="async"><figcaption>The Ambassadors, Hans Holbein the Younger, 1533. On the table, the instruments of knowing where you are. National Gallery, London.</figcaption></figure>
+    <div class="case__art" data-art><svg viewBox="0 0 920 520" role="img" aria-label="A coastline with a ship's track looping over the headland">
+  <path class="land" d="M560 0 L920 0 L920 520 L640 520 C610 470 650 430 610 390 C570 350 520 380 500 340 C480 300 540 280 520 240 C500 200 440 210 450 170 C460 130 530 140 540 90 C548 50 520 30 560 0 Z"/>
+  <path class="ink" d="M0 300 L300 300" fill="none" stroke-width="3" stroke-dasharray="6 8" style="opacity:.5"/>
+  <path class="draw ink" d="M300 300 C300 200 470 170 560 210 C660 255 640 370 540 390 C430 410 300 380 300 300 Z" fill="none" stroke-width="7"/>
+  <text class="label" x="0" y="285">from an oil terminal in Nigeria</text>
+  <text class="label" x="640" y="160">Point Reyes</text>
+</svg></div>
+  </div>
+</section>
+<section class="case" data-tone="white" aria-labelledby="case-rings">
+  <div class="wrap case__grid">
+    <div>
+      <p class="case__when reveal">July 2019. Shanghai.</p>
+      <h2 class="case__h reveal" id="case-rings">Rings on the riverbank.</h2>
+      <p class="case__p reveal">Ships near Shanghai showed up in rings on the bank of the Huangpu. Nobody has said who did it.</p>
+      <p class="case__src reveal"><a href="https://www.technologyreview.com/2019/11/15/131940/ghost-ships-crop-circles-and-soft-gold-a-gps-mystery-in-shanghai/">MIT Technology Review</a>, 15 November 2019</p>
+    </div>
+    <div class="case__art" data-art><svg viewBox="0 0 920 560" role="img" aria-label="A river, and rings of reported positions on the land beside it">
+  <path class="ink" d="M0 470 C180 430 300 500 460 460 C620 420 760 470 920 440" fill="none" stroke-width="44" style="opacity:.12"/>
+  <path class="draw ink" d="M540 150 a60 60 0 1 0 120 0 a60 60 0 1 0 -120 0" fill="none" stroke-width="6" stroke-linecap="round"/>
+  <path class="draw ink" d="M475 150 a125 125 0 1 0 250 0 a125 125 0 1 0 -250 0" fill="none" stroke-width="6" stroke-linecap="round"/>
+  <path class="draw mk" d="M410 150 a190 190 0 1 0 380 0 a190 190 0 1 0 -380 0" fill="none" stroke-width="6" stroke-linecap="round"/>
+  <text class="label" x="0" y="420">Huangpu river</text>
+  <text class="label" x="760" y="40">east bank</text>
+</svg></div>
+  </div>
+</section>
+<section class="case" data-tone="black" aria-labelledby="case-la">
+  <div class="wrap case__grid">
+    <div>
+      <p class="case__when reveal">29 January 2026. Los Angeles and Long Beach.</p>
+      <h2 class="case__h reveal" id="case-la">Seven ships jumped at once.</h2>
+      <p class="case__p reveal">During a GPS test, seven ships jumped across an area 100 miles wide. One went silent for nearly an hour.</p>
+      <p class="case__src reveal"><a href="https://insidegnss.com/?p=197021">Inside GNSS</a>, 2026</p>
+    </div>
+    <div class="case__art" data-art><svg viewBox="0 0 920 520" role="img" aria-label="Seven ship tracks in parallel lanes, each with a sudden jump">
+  <path class="ink" d="M0 60 L300 60" fill="none" stroke-width="5"/>
+  <path class="draw mk" d="M300 60 L560 30" fill="none" stroke-width="4"/>
+  <circle class="pop fillmk" data-at=".95" cx="560" cy="30" r="8"/>
+  <path class="ink" d="M0 124 L330 124" fill="none" stroke-width="5"/>
+  <path class="draw mk" d="M330 124 L607 222" fill="none" stroke-width="4"/>
+  <circle class="pop fillmk" data-at=".95" cx="607" cy="222" r="8"/>
+  <path class="ink" d="M0 188 L360 188" fill="none" stroke-width="5"/>
+  <path class="draw mk" d="M360 188 L654 414" fill="none" stroke-width="4"/>
+  <circle class="pop fillmk" data-at=".95" cx="654" cy="414" r="8"/>
+  <path class="ink" d="M0 252 L390 252" fill="none" stroke-width="5"/>
+  <path class="draw mk" d="M390 252 L701 158" fill="none" stroke-width="4"/>
+  <circle class="pop fillmk" data-at=".95" cx="701" cy="158" r="8"/>
+  <path class="ink" d="M0 316 L420 316" fill="none" stroke-width="5"/>
+  <path class="draw mk" d="M420 316 L748 350" fill="none" stroke-width="4"/>
+  <circle class="pop fillmk" data-at=".95" cx="748" cy="350" r="8"/>
+  <path class="ink" d="M0 380 L450 380" fill="none" stroke-width="5"/>
+  <path class="draw mk" d="M450 380 L575 94" fill="none" stroke-width="4"/>
+  <circle class="pop fillmk" data-at=".95" cx="575" cy="94" r="8"/>
+  <path class="ink" d="M0 444 L480 444" fill="none" stroke-width="5"/>
+  <path class="draw mk" d="M480 444 L622 286" fill="none" stroke-width="4"/>
+  <circle class="pop fillmk" data-at=".95" cx="622" cy="286" r="8"/>
+  <text class="label" x="0" y="510">San Pedro Bay</text>
+</svg></div>
+  </div>
+</section>
+<section class="case" data-tone="orange" aria-labelledby="case-lima">
+  <div class="wrap case__grid">
+    <div>
+      <p class="case__when reveal">10 October 2026. Lima, Peru.</p>
+      <h2 class="case__h reveal" id="case-lima">Ships off Istanbul turned up in Peru.</h2>
+      <p class="case__p reveal">Forty-nine of them, in one 3&nbsp;km patch of inland Lima, 12,221&nbsp;km away. This one is ours.</p>
+      <p class="case__src reveal"><a href="/ledger/">The entry in our ledger</a></p>
+    </div>
+    <div class="case__art" data-art><svg viewBox="0 0 1000 500" role="img" aria-label="World map with a line from the Bosphorus to Lima, Peru">
+  <path class="land" id="world" d=""/>
+  <path class="draw ink" d="M580.5 136.1 Q 430 -20 286 283.4" fill="none" stroke-width="4"/>
+  <circle class="fillfg" cx="580.5" cy="136.1" r="7"/>
+  <circle class="pop fillfg" data-at=".97" cx="286" cy="283.4" r="11"/>
+  <text class="label" x="596" y="128">Bosphorus</text>
+  <text class="label" x="222" y="314">Lima</text>
+</svg></div>
   </div>
 </section>
 
 <section class="close" data-tone="black" aria-labelledby="close-h">
   <div class="wrap">
     <div class="close__grid">
-      <h2 class="h2 reveal" id="close-h">Two founders, in Gujarat.</h2>
+      <h2 class="h2 reveal" id="close-h">Independent records of what actually happened.</h2>
       <div class="reveal">
-        <p class="lead">We built the engine and wrote the paper ourselves, and we are looking for people who would rather check than assume.</p>
-        <p style="margin-top:24px"><a class="btn btn--solid" href="mailto:vishmayraj@anopticon.com">vishmayraj@anopticon.com</a></p>
+        <p class="lead">Sea first, then navies, then the air. Send us the ship and the dates.</p>
+        <p style="margin-top:24px"><a class="btn btn--solid" href="mailto:vishmayraj@anopticon.com?subject=A%20ship%20to%20check">vishmayraj@anopticon.com</a></p>
       </div>
     </div>
-    <nav class="close__links" aria-label="Pages"><a href="/about/"><span>Why we exist</span><span>About</span></a><a href="/team/"><span>Who we are</span><span>Team</span></a><a href="/join/"><span>Work with us</span><span>Join us</span></a><a href="/contact/"><span>Get in touch</span><span>Contact</span></a></nav>
+    <nav class="close__links" aria-label="More">
+      <a href="/projects/"><span>Sea, then watch, then air</span><span>Projects</span></a>
+      <a href="/ais-spoofing/"><span>How AIS spoofing works</span><span>Explainer</span></a>
+      <a href="/ledger/"><span>The ledger</span><span>Our records</span></a>
+      <a href="/research/"><span>Research</span><span>Paper, code, data</span></a>
+      <a href="/team/"><span>Who we are</span><span>Two founders</span></a>
+    </nav>
   </div>
 </section>
 </main>
@@ -232,10 +290,10 @@
 <footer class="foot">
   <div class="wrap foot__grid">
     <p class="foot__what">Anopticon tests what machines report against what the physical world allows. Ships at sea now; navies and coast guards next; aircraft after. <a href="mailto:vishmayraj@anopticon.com">vishmayraj@anopticon.com</a></p>
-    <ul><li><a href="/projects/">Projects</a></li><li><a href="/ledger/">Ledger</a></li><li><a href="/research/">Research</a></li><li><a href="/primer/">Primer</a></li></ul>
-    <ul><li><a href="/partners/">Design partners</a></li><li><a href="/about/">About</a></li><li><a href="/team/">Team</a></li><li><a href="/join/">Join us</a></li><li><a href="/contact/">Contact</a></li></ul>
+    <ul><li><a href="/ais-spoofing/">AIS spoofing</a></li><li><a href="/ledger/">Ledger</a></li><li><a href="/research/">Research</a></li></ul>
+    <ul><li><a href="/projects/">Projects</a></li><li><a href="/team/">Team</a></li><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li></ul>
   </div>
-  <p class="wrap foot__legal">&copy; 2026 Anopticon, Gujarat, India. All pictures are public domain and credited where they appear.</p>
+  <p class="wrap foot__legal">&copy; 2026 Anopticon, Gujarat, India. Sources are linked on each page; pictures are public domain.</p>
 </footer>
 <script src="/assets/world.js" defer></script>
 <script src="/assets/site.js" defer></script>
